@@ -8,12 +8,11 @@ body
     background-color:#e9eaed;
 	}
 
-#header
+header
 	{
 	background-image: url('img/header3.jpg');	
 	width:973px;
 	background-color:#FFFFFF;
-	/* height:57px; */
     height:149px;
 	margin-top:0px;  
 	background-position: center top;
@@ -187,3 +186,29 @@ nav ul li a:hover
     text-decoration:none;
     }
 
+/* ajout 2017 */
+
+#container
+	{
+	width:975px;
+	margin-left: auto;
+	margin-right:auto;
+	background-color:#ffffff;
+	margin-top:0px;
+	padding-top:0px;
+	-webkit-box-shadow: 5px 5px 10px 0 #B0B0B0;
+	box-shadow: 5px 5px 10px 0 #B0B0B0;
+	}
+	
+	
+.titre
+	{
+	padding-left:25px;
+	padding-top:25px;
+	font-family: 'Lobster', cursive;
+	}	
+	
+.version
+	{
+	text-align:right;margin-right:10px;font-size:9px;
+	}	

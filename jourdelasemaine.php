@@ -37,13 +37,12 @@
 
 <body>
 	
-<div style="width:975px;margin-left: auto;margin-right:auto;background-color:#ffffff;margin-top:0px;padding-top:0px;-webkit-box-shadow: 5px 5px 10px 0 #B0B0B0;box-shadow: 5px 5px 10px 0 #B0B0B0;">
-	
-  <a href="index.php">	
-  <h1 style="padding-left:25px;padding-top:25px;font-family: 'Lobster', cursive;">Convertisseur Date Grégorienne / Date Républicaine</h1></a>
-  <p style="text-align:right;margin-right:10px;font-size:9px;"><?php echo SITE_VERSION; ?></p>
+<div id="container">
+	  
+  <h1 class="titre"><a href="index.php">Convertisseur Date Grégorienne / Date Républicaine</a></h1>
+  <p class="version"><?php echo SITE_VERSION; ?></p>
 
-  <header id="header"></header>
+  <header></header>
 
 <section>
 	
@@ -178,7 +177,7 @@
 	<div style="clear:both;"></div>
 	
 	<footer style="text-align:center;">
-    Cette page est en phase de test. Vous pouvez me laisser vos remarques sur Twitter via <a href="https://twitter.com/alexisamand">@alexisamand</a> ou sur facebook via <a href="https://www.facebook.com/alexisamand">https://www.facebook.com/alexisamand</a><br /><br />© 2015 Alexis AMAND
+    Cette page est en phase de test. Vous pouvez me laisser vos remarques sur Twitter via <a href="https://twitter.com/alexisamand">@alexisamand</a> ou sur facebook via <a href="https://www.facebook.com/alexisamand">https://www.facebook.com/alexisamand</a><br /><br />© 2015-2017 Alexis AMAND
 	</footer>
 
 </div>
