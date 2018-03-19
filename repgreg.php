@@ -8,7 +8,7 @@
 
 <title>Conversion entre le calendrier grégorien et calendrier républicain</title>
 
-<meta name="description" content="cet outil permet de convertir une date du calendrier républicain en date du calendrier grégorien">
+<meta name="description" content="Application en ligne pour convertir une date du calendrier républicain en date du calendrier grégorien">
 
 <!-- link href="style.css" rel="stylesheet" type="text/css" / -->
 
@@ -310,10 +310,6 @@
 </script>
 <noscript><p><img src="//www.genealexis.fr/piwik/piwik.php?idsite=8" style="border:0;" alt="" /></p></noscript>
 <!-- End Piwik Code -->
-
-<!-- Piwik Image Tracker-->
-<img src="http://www.genealexis.fr/piwik/piwik.php?idsite=8&rec=1" style="border:0" alt="" />
-<!-- End Piwik -->
 
 </body>
 </html>

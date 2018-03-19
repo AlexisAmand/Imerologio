@@ -6,9 +6,9 @@
 
 <meta charset="utf-8">
 
-<title>A quel jour de la semaine ?</title>
+<title>A quel jour de la semaine correspond cette date ?</title>
 
-<meta name="description" content="Trouver à quel jour de la semaine correspond une date donnée">
+<meta name="description" content="Application en ligne pour trouver à quel jour de la semaine correspond une date donnée">
 
 <!-- link href="style.css" rel="stylesheet" type="text/css" / -->
 
@@ -197,10 +197,6 @@
 </script>
 <noscript><p><img src="//www.genealexis.fr/piwik/piwik.php?idsite=8" style="border:0;" alt="" /></p></noscript>
 <!-- End Piwik Code -->
-
-<!-- Piwik Image Tracker-->
-<img src="http://www.genealexis.fr/piwik/piwik.php?idsite=8&rec=1" style="border:0" alt="" />
-<!-- End Piwik -->
 
 </body>
 </html>

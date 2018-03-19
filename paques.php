@@ -8,7 +8,7 @@
 
 <title>Conversion du calendrier grégorien vers le calendrier républicain</title>
 
-<meta name="description" content="cet outil permet de convertir une date du calendrier grégorien en date du calendrier républicain">
+<meta name="description" content="Application en ligne pour permettant de convertir une date du calendrier grégorien en date du calendrier républicain">
 
 <meta name="google-site-verification" content="NrJvg2SL3r8GToGISpF-SJatGnKIvS5mekxb-2uTef4" />
 
@@ -79,7 +79,7 @@
             $year = $_POST['annee'];
  
             echo  easter_date($year);
-        /*
+        
             $resultat = jddayofweek($jj,0);
 
     
@@ -111,7 +111,7 @@
                     }
 
              echo "<p style='background-color:#dbff67;padding-left:10px;'> Le ".$day." ".$month." ".$year." est un <strong>".$resultat."</strong></p>";   
-             */
+             
             }     
         else
             {
@@ -172,10 +172,6 @@
 </script>
 <noscript><p><img src="//www.genealexis.fr/piwik/piwik.php?idsite=8" style="border:0;" alt="" /></p></noscript>
 <!-- End Piwik Code -->
-
-<!-- Piwik Image Tracker-->
-<img src="http://www.genealexis.fr/piwik/piwik.php?idsite=8&rec=1" style="border:0" alt="" />
-<!-- End Piwik -->
 
 </body>
 </html>
