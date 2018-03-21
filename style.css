@@ -212,3 +212,8 @@ nav ul li a:hover
 	{
 	text-align:right;margin-right:10px;font-size:9px;
 	}	
+
+.last
+	{
+	border:1px solid #dadada;width:196px; padding:0px 10px 10px 10px;
+	}
