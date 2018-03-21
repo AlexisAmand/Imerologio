@@ -12,8 +12,6 @@
 
 <meta name="google-site-verification" content="NrJvg2SL3r8GToGISpF-SJatGnKIvS5mekxb-2uTef4" />
 
-<!-- link href="style.css" rel="stylesheet" type="text/css" / -->
-
 <link href="style.css" rel="stylesheet" type="text/css" />
 <link href='http://fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
 
