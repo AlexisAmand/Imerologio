@@ -1,0 +1,14 @@
+body
+	{
+	background-image:url('../img/fond.jpg');
+	}
+
+.container
+	{
+	background-color:white;
+	}
+	
+header
+	{
+	height:150px;
+	}

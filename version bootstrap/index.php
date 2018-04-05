@@ -9,24 +9,26 @@
 		<title>Conversion du calendrier grégorien vers le calendrier républicain</title>
 		<meta name="description" content=" ">
 						
+    	<!-- Jquery 3.2.1 -->
+    	
+    	<script src="js/jquery.js"></script>						
+						
 		<!-- Bootstrap 4.0.0 -->
 		
 		<link href="css/bootstrap.css" rel="stylesheet">	
-    	
-	    	   		
-    	<!-- Jquery 3.2.1 -->
-    	
-    	<script src="js/jquery.js"></script>
-    	
-    	<script src="js/bootstrap.min.js"></script>	
+		<script src="js/bootstrap.min.js"></script>	
+
+		<!-- CSS perso -->
+		
+		<link href="css/style.css" rel="stylesheet">
 
    	</head>
 	
-<body style="background-image:url('img/fond.jpg')">
+<body>
 
-<div class="container" style="background-color:white;">
+<div class="container">
 
- 	<header class="row" style="height:150px;">
+ 	<header class="row">
  		<div class="col-md-12">
  		
  		<h1 class="text-center">Chronos</h1>
