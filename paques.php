@@ -12,7 +12,7 @@
 		<title>Conversion du calendrier grégorien vers le calendrier républicain</title>
 		<meta name="description" content="Application en ligne pour permettant de convertir une date du calendrier grégorien en date du calendrier républicain">
 
-<!-- Jquery 3.2.1 -->
+        <!-- Jquery 3.2.1 -->
     	
     	<script src="js/jquery.js"></script>						
 						
@@ -24,6 +24,10 @@
 		<!-- CSS perso -->
 		
 		<link href="css/style.css" rel="stylesheet">
+		
+		<!-- font awesome 5.0.10 -->
+		
+		<script defer src="css/fontawesome-all.js"></script>
 		
 		<!-- code piwik pour les stats -->
 		

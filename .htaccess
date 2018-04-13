@@ -1,1 +1,1 @@
-ErrorDocument 404 http://www.la-genealogie-entre-amis.com/index.php
+ErrorDocument 404 http://localhost/calendriers//error404.php

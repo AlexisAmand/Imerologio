@@ -1,5 +1,5 @@
-<?php include('class/class.php'); ?>
-<?php include('config.php');?>
+<?php require('class/class.php'); ?>
+<?php require('config.php');?>
 
 <!DOCTYPE html>
 
@@ -24,6 +24,10 @@
 		<!-- CSS perso -->
 		
 		<link href="css/style.css" rel="stylesheet">
+		
+		<!-- font awesome 5.0.9 -->
+		
+		<link href="css/fontawesome-all.css" rel="stylesheet">
 		
 		<!-- code piwik pour les stats -->
 		
@@ -126,7 +130,7 @@
 
         if (isset($_POST['jour']) and isset($_POST['mois']) and isset($_POST['annee']))
             {
-            $gregorian = new gregorians;                    
+            $gregorian = new gregorians;         
                 
             $gregorian->day = $_POST['jour'];
             $gregorian->month = $_POST['mois'];
