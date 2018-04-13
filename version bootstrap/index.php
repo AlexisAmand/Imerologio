@@ -1,3 +1,6 @@
+<?php include('class/class.php'); ?>
+<?php include('config.php');?>
+
 <!DOCTYPE html>
 
 <html lang="fr">
@@ -7,7 +10,7 @@
 		<meta name="viewport" content="width=device-width,initial-scale=1.0">
 		
 		<title>Conversion du calendrier grégorien vers le calendrier républicain</title>
-		<meta name="description" content=" ">
+		<meta name="description" content="Application en ligne permettant de convertir une date du calendrier grégorien en date du calendrier républicain">
 						
     	<!-- Jquery 3.2.1 -->
     	
@@ -21,6 +24,10 @@
 		<!-- CSS perso -->
 		
 		<link href="css/style.css" rel="stylesheet">
+		
+		<!-- code piwik pour les stats -->
+		
+		<?php include('include/piwik.php'); ?>
 
    	</head>
 	
@@ -31,8 +38,8 @@
  	<header class="row">
  		<div class="col-md-12">
  		
- 		<h1 class="text-center">Chronos</h1>
- 		<p class="text-center">Convertir une date grégorienne en date républicaine</p>
+ 		<h1 class="text-center"><?php echo SITE_TITLE; ?></h1>
+ 		<p class="text-center"><?php echo SITE_SLOGAN; ?></p>
  		
  		</div>
  	</header>
@@ -119,11 +126,13 @@
 
         if (isset($_POST['jour']) and isset($_POST['mois']) and isset($_POST['annee']))
             {
-            $day = $_POST['jour'];
-            $month = $_POST['mois'];
-            $year = $_POST['annee'];
+            $gregorian = new gregorians;                    
+                
+            $gregorian->day = $_POST['jour'];
+            $gregorian->month = $_POST['mois'];
+            $gregorian->year = $_POST['annee'];
     
-            $jj = gregoriantojd ( $month , $day , $year );
+            $jj = gregoriantojd ( $gregorian->month , $gregorian->day , $gregorian->year );
             $resultat = jdtofrench($jj);
     
             if ($resultat == "0/0/0")
@@ -132,95 +141,81 @@
                 }
             else
                 {
-                $republic = explode("/", $resultat);
+                $tabrepublic = explode("/", $resultat);
     
-                $republic_month = $republic[0];
-                $republic_day = $republic[1];
-                $republic_year = $republic[2];
+                $republic = new republics;
+                                        
+                $republic->month = $tabrepublic[0];
+                $republic->day = $tabrepublic[1];
+                $republic->year = $tabrepublic[2];
     
-                switch($republic[0])
+                switch($republic->month)
                     {
-                    case '1': $republic[0] = "Vendémiaire"; Break;
-                    case '2': $republic[0] = "Brumaire"; Break; 
-                    case '3': $republic[0] = "Frimaire"; Break; 
-                    case '4': $republic[0] = "Nivôse"; Break;
-                    case '5': $republic[0] = "Pluviôse"; Break;
-                    case '6': $republic[0] = "Ventôse"; Break;
-                    case '7': $republic[0] = "Germinal"; Break; 
-                    case '8': $republic[0] = "Floréal"; Break;
-                    case '9': $republic[0] = "Prairial"; Break;
-                    case '10': $republic[0] = "Messidor"; Break;
-                    case '11': $republic[0] = "Thermidor"; Break; 
-                    case '12': $republic[0] = "Fructidor"; Break;
-                    case '13': $republic[0] = "Sansculottide" ; Break;
+                        case '1': $republic->month = "Vendémiaire"; Break;
+                        case '2': $republic->month = "Brumaire"; Break; 
+                        case '3': $republic->month = "Frimaire"; Break; 
+                        case '4': $republic->month = "Nivôse"; Break;
+                        case '5': $republic->month = "Pluviôse"; Break;
+                        case '6': $republic->month = "Ventôse"; Break;
+                        case '7': $republic->month = "Germinal"; Break; 
+                        case '8': $republic->month = "Floréal"; Break;
+                        case '9': $republic->month = "Prairial"; Break;
+                        case '10': $republic->month = "Messidor"; Break;
+                        case '11': $republic->month = "Thermidor"; Break; 
+                        case '12': $republic->month = "Fructidor"; Break;
+                        case '13': $republic->month = "Sansculottide" ; Break;
                     }
     
-                switch($republic[2])
+                    switch($republic->year)
                     {
-                    case '1': $republic[2] = "I"; Break;
-                    case '2': $republic[2] = "II"; Break; 
-                    case '3': $republic[2] = "III"; Break; 
-                    case '4': $republic[2] = "IV"; Break;
-                    case '5': $republic[2] = "V"; Break;
-                    case '6': $republic[2] = "VI"; Break;
-                    case '7': $republic[2] = "VII"; Break; 
-                    case '8': $republic[2] = "VIII"; Break;
-                    case '9': $republic[2] = "IX"; Break;
-                    case '10': $republic[2] = "X"; Break;
-                    case '11': $republic[2] = "XI"; Break; 
-                    case '12': $republic[2] = "XII"; Break;
-                    case '13': $republic[2] = "XIII" ; Break;
+                        case '1': $republic->year = "I"; Break;
+                        case '2': $republic->year = "II"; Break; 
+                        case '3': $republic->year = "III"; Break; 
+                        case '4': $republic->year = "IV"; Break;
+                        case '5': $republic->year = "V"; Break;
+                        case '6': $republic->year = "VI"; Break;
+                        case '7': $republic->year = "VII"; Break; 
+                        case '8': $republic->year = "VIII"; Break;
+                        case '9': $republic->year = "IX"; Break;
+                        case '10': $republic->year = "X"; Break;
+                        case '11': $republic->year = "XI"; Break; 
+                        case '12': $republic->year = "XII"; Break;
+                        case '13': $republic->year = "XIII" ; Break;
                     }
     
-                switch($month)
+                    switch($gregorian->month)
                     {
-                    case '1': $month = "janvier"; Break;
-                    case '2': $month = "février"; Break; 
-                    case '3': $month = "mars"; Break; 
-                    case '4': $month = "avril"; Break;
-                    case '5': $month = "mai"; Break;
-                    case '6': $month = "juin"; Break;
-                    case '7': $month = "juillet"; Break; 
-                    case '8': $month = "août"; Break;
-                    case '9': $month = "septembre"; Break;
-                    case '10': $month = "octobre"; Break;
-                    case '11': $month = "novembre"; Break; 
-                    case '12': $month = "décembre"; Break;
+                        case '1': $gregorian->month = "janvier"; Break;
+                        case '2': $gregorian->month = "février"; Break; 
+                        case '3': $gregorian->month = "mars"; Break; 
+                        case '4': $gregorian->month = "avril"; Break;
+                        case '5': $gregorian->month = "mai"; Break;
+                        case '6': $gregorian->month = "juin"; Break;
+                        case '7': $gregorian->month = "juillet"; Break; 
+                        case '8': $gregorian->month = "août"; Break;
+                        case '9': $gregorian->month = "septembre"; Break;
+                        case '10': $gregorian->month = "octobre"; Break;
+                        case '11': $gregorian->month = "novembre"; Break; 
+                        case '12': $gregorian->month = "décembre"; Break;
                     }
     
-                echo "<p class='alert alert-success'> Le <strong>".$day." ".$month." ".$year."</strong> correspond au <strong>".$republic[1]." ".$republic[0]." an ".$republic[2]."</strong></p>";
+                    echo "<p class='alert alert-success'> Le <strong>".$gregorian->day." ".$gregorian->month." ".$gregorian->year."</strong> correspond au <strong>".$republic->day." ".$republic->month." an ".$republic->year."</strong></p>";
                 }
             }
     
         ?>	 
  	  			 	  
 		</article>  
- 	
+		
  		<aside class="col-md-3">
- 		
- 		
- 		
- 		<div class="card">
-            <div class="card-header">Titre</div>
-       
- 		
- 		
- 		
- 
-            <div class='list-group'>
-                <a id="gregrep"  class='list-group-item list-group-item-action' href="index.php" title="Convertir une date du calendrier grégorien en date du calendrier républicain">Grégorien vers Républicain</a>
-                <a id="repgreg" class='list-group-item list-group-item-action' href="repgreg.php" title="Convertir une date du calendrier républicain en date du calendrier grégorien">Républicain vers Grégorien</a>
-                <a id="jourdate"   class='list-group-item list-group-item-action' href="jourdelasemaine.php" title="Trouver à quel jour de la semaine correspond une date donnée">Jour d'une date</a>
-            </div>
-            
-     </div>
+ 				
+ 			<?php include('include/aside.php');?>
  		
  		<br />
  		
  		<div class="card">
             <div class="card-header">Titre</div>
-        
- 		
+        		
  		<ul class='list-group'>
  		
         <?php
@@ -271,7 +266,7 @@
  	</section>
  	
  	<footer class="row">
- 		
+ 		<?php include('include/footer.php'); ?> 		
  	</footer>
  	
 </div>
