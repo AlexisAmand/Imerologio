@@ -53,14 +53,19 @@
 
     		<h4>Historique des versions</h4>
     		
+    			<h5>version 0.4.6 (13/04/18)</h5>
+    			
+    				- Suite du passage à Bootstrap.<br />
+    		
     			<h5>version 0.4.5 (13/04/18)</h5>
 
-					- Ajout de Font Awesome 5.0.10<br />
+					- Mise du code source sur Github<br />
+					- Ajout de Font Awesome 5.0.9<br />
 					- J'ai enlevé la version "sans BT" de GitHub<br />
     
     			<h5>version 0.4.3 (13/04/18)</h5>
     
-    				- Mise sur Github<br />
+    				- Mise du code source sur Github<br />
     				- La page "Jour de Pâques" est maintenant disponible.<br />
     				- Suite du passage à Bootstrap.<br />
     				- Ajout des class gregorians et republicans pour optimiser le code source.<br />

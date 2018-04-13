@@ -51,12 +51,14 @@
  	<section class="row">
  		<article class="col-md-9">
  		
- 		<h4>Comment ça marche ?</h4>
+ 		<h4>Convertir une date grégorienne en date républicaine </h4>	
+ 		
+ 		<h5>Comment ça marche ?</h5>
 
-    	<p>Indiquez votre date et cliquez sur le bouton convertir.</p>
-   		<p class="text-justify">Votre date doit être comprise entre le <strong>22 septembre 1792</strong> (1er vendémiaire an I, jour de proclamation de la République) et le <strong>1er janvier 1806</strong>, date d&#39;application du sénatus-consulte signé par Napoléon le 22 fructidor an XIII (9 septembre 1805) qui abroge le calendrier républicain et instaure le retour au calendrier grégorien .</p>
+    	<p>- Indiquez votre date et cliquez sur le bouton convertir.<br />
+   		- Votre date doit être comprise entre le <strong>22 septembre 1792</strong> (1er vendémiaire an I, jour de proclamation de la République) et le <strong>1er janvier 1806</strong>, date d&#39;application du sénatus-consulte signé par Napoléon le 22 fructidor an XIII (9 septembre 1805) qui abroge le calendrier républicain et instaure le retour au calendrier grégorien .</p>
 
-    	<h4>C'est parti !</h4>
+    	<h5>C'est parti !</h5>
  		
  				
  		<form method="post" action="index.php" style="text-align:center;" class="form-inline">
@@ -203,7 +205,7 @@
                         case '12': $gregorian->month = "décembre"; Break;
                     }
     
-                    echo "<p class='alert alert-success'> Le <strong>".$gregorian->day." ".$gregorian->month." ".$gregorian->year."</strong> correspond au <strong>".$republic->day." ".$republic->month." an ".$republic->year."</strong></p>";
+                    echo "<p class='alert alert-success'>Le <strong>".$gregorian->day." ".$gregorian->month." ".$gregorian->year."</strong> correspond au <strong>".$republic->day." ".$republic->month." an ".$republic->year."</strong></p>";
                 }
             }
     
