@@ -37,6 +37,8 @@
 	
 <body>
 
+<div class="jumbotron vertical-center">
+
 <div class="container">
 
  	<header class="row">
@@ -52,6 +54,10 @@
  		<article class="col-md-9">
 
     		<h4>Historique des versions</h4>
+    		
+    			<h5>version 0.4.14 (16/04/18)</h5>
+    		
+    				- Suite du passage à Bootstrap<br />
     		
     			<h5>version 0.4.13 (16/04/18)</h5>
     			
@@ -141,34 +147,19 @@
     
     	<aside class="col-md-3">
    
-        <nav>
-			<?php include('include/aside.php');?>
-		</nav>
+       		<nav><?php include('include/aside.php');?></nav>
 
     	</aside>
 
-        <div style="text-align:center;">
-    	<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-        <!-- arbre.genealexis.fr 1 -->
-        <ins class="adsbygoogle"
-        style="display:inline-block;width:468px;height:60px"
-        data-ad-client="ca-pub-1550427609493753"
-        data-ad-slot="1772159645"></ins>
-        <script>
-        (adsbygoogle = window.adsbygoogle || []).push({});
-        </script>
-        </div>
-			
-		<p style="text-align:center;">
-		Cette page est en phase de test.<br />Vous pouvez me laisser vos remarques sur Twitter via <a href="https://twitter.com/alexisamand">@alexisamand</a> ou sur facebook via <a href="https://www.facebook.com/alexisamand">https://www.facebook.com/alexisamand</a>
-		</p>
-		
+	
 	</section>
 	
  	<footer class="row">
  		<?php include('include/footer.php'); ?> 		
  	</footer>
  	
+</div>
+
 </div>
 
 </body>

@@ -68,11 +68,11 @@
     	<h5>Convertir une date</h5>
  		
  				
- 		<form method="post" action="index.php" style="text-align:center;" class="form-inline">
+ 		<form method="post" action="index.php" class="form-inline">
  			
      		<div class="form-group">
     		<label for="jours">Jour</label>
-    		<select name="jour" class="form-control">
+    		<select name="jour" class="form-control m-2">
               <option selected>1</option>
               <?php
               for($i=2; $i<32; $i++)
@@ -85,7 +85,7 @@
     		
     		<div class="form-group">
     		<label for="sujet">Mois</label> 		
-		    <select name="mois">
+		    <select name="mois" class="form-control m-2">
 			      <option value="1" selected>Janvier</option>
 			      <?php
 		      	  $MoisGregoriens = array("Février", "Mars", "Avril", "Mai", "Juin", "Juillet", "Aout", "Septembre", "Octobre", "Novembre", "Décembre");
@@ -101,7 +101,7 @@
     		
     		<div class="form-group">
     		<label for="sujet">Année</label>
-    		<select name="annee" class="form-control">
+    		<select name="annee" class="form-control m-2">
                   <option selected>1792</option>
                   <?php
                   for($i=1793; $i<1806; $i++)
@@ -129,7 +129,7 @@
                 }
             ?>
     
- 			<br /><br /><input type="submit" value="Convertir !" class="btn btn-default">	
+ 			<input type="submit" value="Convertir !" class="btn btn-default">	
  			
  	  	</form>
 
@@ -181,11 +181,17 @@
  		<br />
  		
  		<div class="card">
-            <div class="card-header">Titre</div>
+            <div class="card-header">Historique</div>
         		
  		<ul class='list-group'>
  		
         <?php
+        
+        // -------------------------------------------------------------------------
+        // L'historique est une chaine de caractéres concaténée à chaque conversion
+        // Ensuite, je récupére les éléments 3 par 3 pour afficher les dates : J/M/A
+        // -------------------------------------------------------------------------    
+        
         echo "";
         
         if (isset($historique))

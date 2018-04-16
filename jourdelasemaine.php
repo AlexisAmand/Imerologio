@@ -36,6 +36,8 @@
    	</head>
 	
 <body>
+
+<div class="jumbotron vertical-center">	
 	
 <div class="container">
 
@@ -64,11 +66,12 @@
 
     		<h5>Trouver un jour</h5>
 
-    		<form method="post" action="jourdelasemaine.php" style="text-align:center;">
+    		<form method="post" action="jourdelasemaine.php" class="form-inline">
 
             	<label>Jour</label> : 
             
-                <select name="jour">
+            	<div class="form-group">
+                <select name="jour" class="form-control m-2">
                   <option selected>1</option>
                   <?php
                   for($i=2; $i<32; $i++)
@@ -77,10 +80,11 @@
                     }
                   ?>
                 </select>
-            
+                </div>
+                            
 	    		<div class="form-group">
 	    		<label for="sujet">Mois</label> 		
-			    <select name="mois">
+			    <select name="mois" class="form-control m-2">
 				      <option value="1" selected>Janvier</option>
 				      <?php
 			      	  $MoisGregoriens = array("Février", "Mars", "Avril", "Mai", "Juin", "Juillet", "Aout", "Septembre", "Octobre", "Novembre", "Décembre");
@@ -94,12 +98,12 @@
 			    </select>
 	       		</div>
             
+            	<div class="form-group">
             	<label>Année</label> :            
-                <input type="text" name="annee">
-                
-                <br /><br />
-                
-                <input type="submit" value="Trouver !">
+                <input type="text" name="annee" class="form-control m-2">
+                </div>
+                              
+                <input type="submit" value="Trouver !" class="btn btn-default">
 
    			 </form>
 
@@ -135,9 +139,7 @@
    
     	<aside class="col-md-3">
    
-        <nav>
-			<?php include('include/aside.php');?>
-		</nav>
+       		<nav><?php include('include/aside.php');?></nav>
 
     	</aside>
 
@@ -159,6 +161,8 @@
  		<?php include('include/footer.php'); ?> 		
  	</footer>
  	
+</div>
+
 </div>
 
 </body>

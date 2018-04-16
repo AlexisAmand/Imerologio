@@ -36,6 +36,8 @@
    	</head>
 	
 <body>
+
+<div class="jumbotron vertical-center">
 	
 <div class="container">
 
@@ -64,11 +66,11 @@
 	
 	    <h5>Convertir une date</h5>
 	
-	    <form method="post" action="repgreg.php" style="text-align:center;">
+	    <form method="post" action="repgreg.php" class="form-inline">
 	
+		<div class="form-group">
 	    <label>Jour</label> : 
-	
-	    <select name="jour">
+	    <select name="jour" class="form-control m-2">
 	      <option selected>1</option>
 	      <?php
 	      for($i=2; $i<31; $i++)
@@ -77,10 +79,11 @@
 	        }
 	      ?>
 	    </select>
+	    </div>
 	
-	    <label>Mois</label> : 
-	    
-	    <select name="mois">
+		<div class="form-group">
+	    <label>Mois</label> : 	    
+	    <select name="mois" class="form-control m-2">
 	      <option value="1" selected>Vendémiaire</option>
 	      <?php
 	      $MoisRepublicains = array("Brumaire", "Frimaire", "Nivose", "Pluviose", "Ventose", "Germinal", "Floréal", "Prairial", "Messidor", "Thermidor", "Fructidor", "Sansculottide");
@@ -92,10 +95,12 @@
 	        }
 	      ?>
 	    </select>
+	    </div>
 	    
+	    <div class="form-group">	    
 	    <label>An</label> : 
 	
-	    <select name="annee">
+	    <select name="annee" class="form-control m-2">
 	      <option value="1" selected>I</option>
 	      <?php
 	      $romain = array("II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X", "XI", "XII", "XIII", "XIV");
@@ -107,6 +112,7 @@
 	        }
 	      ?>
 	    </select>
+	    </div>
 	
 	    <?php
 	    if (isset($_POST['compteur']))
@@ -125,7 +131,6 @@
 	        }
 	    ?>
 	
-	    <br /><br />
 	    <input type="submit" value="Convertir !">
 	
 	    </form>
@@ -178,15 +183,16 @@
 	 		<br />
 	 		
 	 		<div class="card">
-	            <div class="card-header">Titre</div>
+	            <div class="card-header">Historique</div>
 	        		
 	 		<ul class='list-group'>
 	
 	    <?php
 	
-	    /*
-	    echo $historique;
-	    */
+	     // -------------------------------------------------------------------------
+         // L'historique est une chaine de caractéres concaténée à chaque conversion
+         // Ensuite, je récupére les éléments 3 par 3 pour afficher les dates : J/M/A
+         // -------------------------------------------------------------------------
 	
 	    if (isset($historique))
 	        {
@@ -235,6 +241,8 @@
  		<?php include('include/footer.php'); ?> 		
  	</footer>
  	
+</div>
+
 </div>
 
 </body>

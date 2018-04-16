@@ -1,5 +1,5 @@
 <div class="card">
-	<div class="card-header">Titre</div>
+	<div class="card-header">Outils</div>
     	<div class='list-group'>
         	
         	<a id="gregrep"  class='list-group-item list-group-item-action' href="index.php" title="Convertir une date du calendrier grégorien en date du calendrier républicain">

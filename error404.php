@@ -36,6 +36,8 @@
    	</head>
 	
 <body>
+
+<div class="jumbotron vertical-center">
 	
 <div class="container">
 
@@ -50,7 +52,7 @@
 
 	<section class="row">
 		<article class="col-md-9">
-
+ 
     	<h4>Erreur 404 !</h4>
     	
     	<p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>   	
@@ -59,23 +61,9 @@
    
     	<aside class="col-md-3">
    
-        <nav>
-			<?php include('include/aside.php');?>
-		</nav>
+       		<nav><?php include('include/aside.php');?></nav>
 
     	</aside>
-
-        <div style="text-align:center;">
-    	<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-        <!-- arbre.genealexis.fr 1 -->
-        <ins class="adsbygoogle"
-        style="display:inline-block;width:468px;height:60px"
-        data-ad-client="ca-pub-1550427609493753"
-        data-ad-slot="1772159645"></ins>
-        <script>
-        (adsbygoogle = window.adsbygoogle || []).push({});
-        </script>
-        </div>
 					
 	</section>
 	
@@ -83,6 +71,8 @@
  		<?php include('include/footer.php'); ?> 		
  	</footer>
  	
+</div>
+
 </div>
 
 </body>
