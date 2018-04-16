@@ -12,11 +12,11 @@
 		<title>Conversion entre le calendrier grégorien et calendrier républicain</title>
 		<meta name="description" content="Application en ligne pour convertir une date du calendrier républicain en date du calendrier grégorien">
 
-		<!-- Jquery 3.2.1 -->
+		<!-- Jquery 3.3.1 -->
     	
-    	<script src="js/jquery.js"></script>						
+    	<script src="js/jquery-3.3.1.min.js"></script>						
 						
-		<!-- Bootstrap 4.0.0 -->
+		<!-- Bootstrap 4.1.0 -->
 		
 		<link href="css/bootstrap.css" rel="stylesheet">	
 		<script src="js/bootstrap.min.js"></script>	
@@ -25,7 +25,7 @@
 		
 		<link href="css/style.css" rel="stylesheet">
 		
-		<!-- font awesome 5.0.9 -->
+		<!-- font awesome 5.0.10 -->
 		
 		<link href="css/fontawesome-all.css" rel="stylesheet">
 		
@@ -53,12 +53,16 @@
 
     	<h4>Convertir une date républicaine en date grégorienne</h4>
 
-	    <h5>Consignes</h5>
+	    <h5>Un peu d'histoire</h5>
+ 		
+ 		<p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+ 		
+ 		<h5>Comment ça marche ?</h5>
 	
 	    <p>- Indiquez votre date et cliquez sur le bouton convertir.<br />
-	    - Cet outil convertit les dates comprises entre l'an I et l'an XIV (22 Septembre 1792 à 22 Septembre 1806 en calendrier grégorien). Il couvre plus que la durée d'existence du calendrier, mais c'est pour des raisons techniques.</p>
+	    - Cet outil convertit les dates comprises entre l'an I et l'an XIV (22 Septembre 1792 à 22 Septembre 1806 en calendrier grégorien). Il couvre uniquement la durée d'existence du calendrier, mais c'est pour des raisons techniques.</p>
 	
-	    <h5>C'est parti !</h5>
+	    <h5>Convertir une date</h5>
 	
 	    <form method="post" action="repgreg.php" style="text-align:center;">
 	
@@ -75,23 +79,20 @@
 	    </select>
 	
 	    <label>Mois</label> : 
-	
+	    
 	    <select name="mois">
-	        <option selected value="1">Vendémiaire</option>
-	        <option value="2">Brumaire</option>
-	        <option value="3">Frimaire</option>  
-	        <option value="4">Nivose</option>
-	        <option value="5">Pluviose</option>
-	        <option value="6">Ventose</option>
-	        <option value="7">Germinal</option>  
-	        <option value="8">Floréal</option>
-	        <option value="9">Prairial</option>
-	        <option value="10">Messidor</option>
-	        <option value="11">Thermidor</option>  
-	        <option value="12">Fructidor</option>
-	        <option value="13">Sansculottide</option>
+	      <option value="1" selected>Vendémiaire</option>
+	      <?php
+	      $MoisRepublicains = array("Brumaire", "Frimaire", "Nivose", "Pluviose", "Ventose", "Germinal", "Floréal", "Prairial", "Messidor", "Thermidor", "Fructidor", "Sansculottide");
+	      $i = 2;
+	      foreach($MoisRepublicains as $val)
+	        {
+	        echo "<option value=".$i.">".$val."</option>";
+	        $i++;
+	        }
+	      ?>
 	    </select>
-	
+	    
 	    <label>An</label> : 
 	
 	    <select name="annee">
@@ -133,11 +134,13 @@
 	
 	    if (isset($_POST['jour']) and isset($_POST['mois']) and isset($_POST['annee']))
 	        {
-	        $day = $_POST['jour'];
-	        $month = $_POST['mois'];
-	        $year = $_POST['annee'];
+	        $republic = new republics;	
+	        	
+	        $republic->day = $_POST['jour'];
+	        $republic->month = $_POST['mois'];
+	        $republic->year = $_POST['annee'];
 	
-	        $jj = frenchtojd( $month , $day , $year );
+	        $jj = frenchtojd( $republic->month , $republic->day , $republic->year );
 	        $resultat = jdtogregorian($jj);
 	
 	        if ($resultat == "0/0/0")
@@ -146,63 +149,21 @@
 	            }
 	        else
 	            {
-	            $republic = explode("/", $resultat);
+	            $tabrepublic = explode("/", $resultat);
 	
-	            $republic_month = $republic[0];
-	            $republic_day = $republic[1];
-	            $republic_year = $republic[2];
+	            $gregorian = new gregorians;
+	            
+	            // $republic_month = $tabrepublic[0];
+	            $gregorian->day = $tabrepublic[1];
+	            $gregorian->year = $tabrepublic[2];
 	
-	            switch($republic[0])
-	                {
-	                case '1': $republic[0] = "Janvier"; Break;
-	                case '2': $republic[0] = "Février"; Break; 
-	                case '3': $republic[0] = "Mars"; Break; 
-	                case '4': $republic[0] = "Avril"; Break;
-	                case '5': $republic[0] = "Mai"; Break;
-	                case '6': $republic[0] = "Juin"; Break;
-	                case '7': $republic[0] = "Juillet"; Break; 
-	                case '8': $republic[0] = "Août"; Break;
-	                case '9': $republic[0] = "Septembre"; Break;
-	                case '10': $republic[0] = "Octobre"; Break;
-	                case '11': $republic[0] = "Novembre"; Break; 
-	                case '12': $republic[0] = "Décembre"; Break;
-	                }
+	            $gregorian->month = $gregorian->MoisEnLettre($tabrepublic[0]);
+	            
+                $republic->month = $republic->MoisEnLettre($gregorian->month);
+	            
+	            $republic->year = $republic->AnneeEnLettre($republic->year);
 	
-	            switch($month)
-	                {
-	                case '1': $month = "Vendémiaire"; Break;
-	                case '2': $month = "Brumaire"; Break;
-	                case '3': $month = "Frimaire"; Break;  
-	                case '4': $month = "Nivose"; Break;
-	                case '5': $month = "Pluviose"; Break;
-	                case '6': $month = "Ventose"; Break;
-	                case '7': $month = "Germinal"; Break;  
-	                case '8': $month = "Floréal"; Break;
-	                case '9': $month = "Prairial"; Break;
-	                case '10': $month = "Messidor"; Break;
-	                case '11': $month = "Thermidor"; Break;  
-	                case '12': $month = "Fructidor"; Break;
-	                case '13': $month = "Sansculottide"; Break;
-	                }
-	
-	            switch($year)
-	                {
-	                case '1': $year = "I"; Break;
-	                case '2': $year = "II"; Break; 
-	                case '3': $year = "III"; Break; 
-	                case '4': $year = "IV"; Break;
-	                case '5': $year = "V"; Break;
-	                case '6': $year = "VI"; Break;
-	                case '7': $year = "VII"; Break; 
-	                case '8': $year = "VIII"; Break;
-	                case '9': $year = "IX"; Break;
-	                case '10': $year = "X"; Break;
-	                case '11': $year = "XI"; Break; 
-	                case '12': $year = "XII"; Break;
-	                case '13': $year = "XIII" ; Break;
-	                }
-	
-	            echo "<p class='alert alert-success'>Le <strong>".$day." ".$month." an ".$year."</strong> correspond au <strong>".$republic[1]." ".$republic[0]." ".$republic[2]."</strong></p>";
+	            echo "<p class='alert alert-success'>Le <strong>".$republic->day." ".$republic->month." an ".$republic->year."</strong> correspond au <strong>".$gregorian->day." ".$gregorian->month." ".$gregorian->year."</strong></p>";
 	            }
 	        }
 	
@@ -233,8 +194,8 @@
 	        $tableau = explode('/', $historique);
 	        for ($i = 0; $i < count($tableau) - 1; $i+=3)
 	            {
-	            echo "<li href='#' class='list-group-item'>".$tableau[$i];
-	
+	            echo "<li href='#' class='list-group-item'><i class='fas fa-angle-right'></i>&nbsp;&nbsp;".$tableau[$i];
+	           
 	            switch($tableau[$i + 1])
 	                {
 	                case '1': $month = "Vendémiaire"; Break;

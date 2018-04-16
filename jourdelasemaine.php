@@ -1,5 +1,5 @@
-<?php include('class/class.php'); ?>
-<?php include('config.php');?>
+<?php require('class/class.php'); ?>
+<?php require('config.php');?>
 
 <!DOCTYPE html>
 
@@ -12,11 +12,11 @@
 		<title>A quel jour de la semaine correspond cette date ?</title>
 		<meta name="description" content="Application en ligne pour trouver à quel jour de la semaine correspond une date donnée">
 
-        <!-- Jquery 3.2.1 -->
+        <!-- Jquery 3.3.1 -->
     	
-    	<script src="js/jquery.js"></script>						
+    	<script src="js/jquery-3.3.1.min.js"></script>						
 						
-		<!-- Bootstrap 4.0.0 -->
+		<!-- Bootstrap 4.1.0 -->
 		
 		<link href="css/bootstrap.css" rel="stylesheet">	
 		<script src="js/bootstrap.min.js"></script>	
@@ -24,6 +24,10 @@
 		<!-- CSS perso -->
 		
 		<link href="css/style.css" rel="stylesheet">
+		
+		<!-- font awesome 5.0.10 -->
+		
+		<link href="css/fontawesome-all.css" rel="stylesheet">
 		
 		<!-- code piwik pour les stats -->
 		
@@ -49,13 +53,16 @@
 
     	<h4>A quel jour correspond une date ?</h4>
 
-    		<h5>Comment ça marche ?</h5>
+    		<h5>Un peu d'histoire</h5>
+ 	
+		 	<p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		 		
+		 	<h5>Comment ça marche ?</h5>
 
-    		<p>
-    		- Indiquez votre date et cliquez sur le bouton "Trouver !".<br />
+    		<p>- Indiquez votre date et cliquez sur le bouton "Trouver !".<br />
     		- Votre date doit être composée de 4 chiffres !</p>
 
-    		<h5>C'est parti !</h5>
+    		<h5>Trouver un jour</h5>
 
     		<form method="post" action="jourdelasemaine.php" style="text-align:center;">
 
@@ -71,27 +78,27 @@
                   ?>
                 </select>
             
-            	<label>Mois</label> : 
+	    		<div class="form-group">
+	    		<label for="sujet">Mois</label> 		
+			    <select name="mois">
+				      <option value="1" selected>Janvier</option>
+				      <?php
+			      	  $MoisGregoriens = array("Février", "Mars", "Avril", "Mai", "Juin", "Juillet", "Aout", "Septembre", "Octobre", "Novembre", "Décembre");
+			          $i = 2;
+			          foreach($MoisGregoriens as $val)
+			          	{
+			        	echo "<option value=".$i.">".$val."</option>";
+			        	$i++;
+			        	}
+			      	  ?>
+			    </select>
+	       		</div>
             
-                <select name="mois">
-                    <option selected value="1">Janvier</option>
-                    <option value="2">Février</option>
-                    <option value="3">Mars</option>  
-                    <option value="4">Avril</option>
-                    <option value="5">Mai</option>
-                    <option value="6">Juin</option>
-                    <option value="7">Juillet</option>  
-                    <option value="8">Aout</option>
-                    <option value="9">Septembre</option>
-                    <option value="10">Octobre</option>
-                    <option value="11">Novembre</option>  
-                    <option value="12">Décembre</option>
-                </select>
-            
-            	<label>Année</label> : 
-            
+            	<label>Année</label> :            
                 <input type="text" name="annee">
+                
                 <br /><br />
+                
                 <input type="submit" value="Trouver !">
 
    			 </form>
@@ -105,44 +112,20 @@
                     $gregorian = new gregorians;
                     
                     $gregorian->day = $_POST['jour'];
-                    $gregorian->month = $_POST['mois'];
                     $gregorian->year = $_POST['annee'];
         
-                    $jj = gregoriantojd( $gregorian->month , $gregorian->day , $gregorian->year );
+                    $jj = gregoriantojd( $_POST['mois'] , $gregorian->day , $gregorian->year );
                     $resultat = jddayofweek($jj,0);
-        
-                    switch($resultat)
-                            {
-                            case '0': $resultat = "dimanche"; Break;
-                            case '1': $resultat = "lundi"; Break; 
-                            case '2': $resultat = "mardi"; Break; 
-                            case '3': $resultat = "mercredi"; Break;
-                            case '4': $resultat = "jeudi"; Break;
-                            case '5': $resultat = "vendredi"; Break;
-                            case '6': $resultat = "samedi"; Break; 
-                            }
-        
-                   switch($gregorian->month)
-                            {
-                            case '1': $gregorian->month = "janvier"; Break;
-                            case '2': $gregorian->month = "février"; Break; 
-                            case '3': $gregorian->month = "mars"; Break; 
-                            case '4': $gregorian->month = "avril"; Break;
-                            case '5': $gregorian->month = "mai"; Break;
-                            case '6': $gregorian->month = "juin"; Break;
-                            case '7': $gregorian->month = "juillet"; Break; 
-                            case '8': $gregorian->month = "août"; Break;
-                            case '9': $gregorian->month = "septembre"; Break;
-                            case '10': $gregorian->month = "octobre"; Break;
-                            case '11': $gregorian->month = "novembre"; Break; 
-                            case '12': $gregorian->month = "décembre"; Break;
-                            }
-        
-                            echo "<p style='background-color:#dbff67;padding-left:10px;'> Le ".$gregorian->day." ".$gregorian->month." ".$gregorian->year." est un <strong>".$resultat."</strong></p>";   
+                    
+                    $resultat = $gregorian->JourEnLettre($resultat);     
+                    
+                    $gregorian->month = $gregorian->MoisEnLettre($_POST['mois']);
+                     
+                    echo "<p class='alert alert-success'> Le ".$gregorian->day." ".$gregorian->month." ".$gregorian->year." est un <strong>".$resultat."</strong></p>";   
                     }     
                 else
                     {
-                    echo "<p style='padding-left:10px;background-color:#ff8989;color:#FFFFFF;'>La date entrée n'est pas correcte !</p>";
+                    echo "<p class='alert alert-warning'>La date entrée n'est pas correcte !</p>";
                     }    
                 }
         

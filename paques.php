@@ -1,5 +1,5 @@
-<?php include('class/class.php'); ?>
-<?php include('config.php');?>
+<?php require('class/class.php'); ?>
+<?php require('config.php');?>
 
 <!DOCTYPE html>
 
@@ -9,14 +9,14 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width,initial-scale=1.0">
 
-		<title>Conversion du calendrier grégorien vers le calendrier républicain</title>
-		<meta name="description" content="Application en ligne pour permettant de convertir une date du calendrier grégorien en date du calendrier républicain">
+		<title>Trouver quel jour était Pâques</title>
+		<meta name="description" content="Application en ligne pour trouver quelle est la date de Pâques">
 
-        <!-- Jquery 3.2.1 -->
+        <!-- Jquery 3.3.1 -->
     	
-    	<script src="js/jquery.js"></script>						
+    	<script src="js/jquery-3.3.1.min.js"></script>						
 						
-		<!-- Bootstrap 4.0.0 -->
+		<!-- Bootstrap 4.1.0 -->
 		
 		<link href="css/bootstrap.css" rel="stylesheet">	
 		<script src="js/bootstrap.min.js"></script>	
@@ -27,7 +27,7 @@
 		
 		<!-- font awesome 5.0.10 -->
 		
-		<script defer src="css/fontawesome-all.js"></script>
+		<link href="css/fontawesome-all.css" rel="stylesheet">
 		
 		<!-- code piwik pour les stats -->
 		
@@ -51,13 +51,17 @@
 	<section class="row">
  		<article class="col-md-9">
 
-    <h1>Convertir une date grégorienne en date républicaine</h1>
+    <h4>Quel jour était Pâques ?</h4>
 
-    <h4>Consignes</h4>
+ 	<h5>Un peu d'histoire</h5>
+ 	
+ 	<p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+ 		
+ 	<h5>Comment ça marche ?</h5>
 
     <p>- Indiquez votre date et cliquez sur le bouton convertir.</p>
    
-    <h4>C'est parti !</h4>
+    <h5>Trouver une date</h5>
 
     <form method="post" action="paques.php" style="text-align:center;">
 
@@ -78,10 +82,7 @@
         if (!empty($_POST['annee']))
             {
             $year = $_POST['annee'];
- 
-            /* Retourne un timestamp UNIX pour Pâques */    
-            // echo  easter_date($year);
-        
+         
             /* unixtojd : timestamp UNIX vers Jour Julien */
             
             $unix = unixtojd(easter_date($year));
@@ -89,37 +90,18 @@
             /* jdtogregorian : Jour Julien vers calendrier gregorien */
         
             $resultat = jdtogregorian($unix);
-            
-            /* Retourne le numéro du jour de la semaine de 0 à 6 */
-            /* Inutile... Pâques c'est thrs un dimanche -_-' */
-            
-            // $resultat = jddayofweek( easter_date($year),0);
-            
+                        
             $dateunix = explode("/", $resultat);
             
             $gregorian = new gregorians;  
             
-            $gregorian->month = $dateunix[0];
+            // $gregorian->month = $dateunix[0] ;
             $gregorian->day = $dateunix[1];
             $gregorian->year = $dateunix[2];
-                                   
-            switch($gregorian->month)
-                {
-                case '1': $gregorian->month = "janvier"; Break;
-                case '2': $gregorian->month = "février"; Break;
-                case '3': $gregorian->month = "mars"; Break;
-                case '4': $gregorian->month = "avril"; Break;
-                case '5': $gregorian->month = "mai"; Break;
-                case '6': $gregorian->month = "juin"; Break;
-                case '7': $gregorian->month = "juillet"; Break;
-                case '8': $gregorian->month = "août"; Break;
-                case '9': $gregorian->month = "septembre"; Break;
-                case '10': $gregorian->month = "octobre"; Break;
-                case '11': $gregorian->month = "novembre"; Break;
-                case '12': $gregorian->month = "décembre"; Break;
-                }
-
-                echo "<p class='alert alert-success'>En ".$gregorian->year.", Pâques est le ".$gregorian->day." ".$gregorian->month."</strong></p>";   
+                      
+            $gregorian->month = $gregorian->MoisEnLettre($dateunix[0]);
+            
+			echo "<p class='alert alert-success'>En ".$gregorian->year.", Pâques est le ".$gregorian->day." ".$gregorian->month."</strong></p>";   
              
             }     
         else

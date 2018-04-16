@@ -1,5 +1,5 @@
-<?php include('class/class.php'); ?>
-<?php include('config.php');?>
+<?php require('class/class.php'); ?>
+<?php require('config.php');?>
 
 <!DOCTYPE html>
 
@@ -9,14 +9,14 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width,initial-scale=1.0">
 
-		<title>A quel jour de la semaine ?</title>
-		<meta name="description" content="Trouver à quel jour de la semaine correspond une date donnée">
+		<title>Historique des versions</title>
+		<meta name="description" content="Historique des versions">
 
-    	<!-- Jquery 3.2.1 -->
+    	<!-- Jquery 3.3.1 -->
     	
-    	<script src="js/jquery.js"></script>						
+    	<script src="js/jquery-3.3.1.min.js"></script>						
 						
-		<!-- Bootstrap 4.0.0 -->
+		<!-- Bootstrap 4.1.0 -->
 		
 		<link href="css/bootstrap.css" rel="stylesheet">	
 		<script src="js/bootstrap.min.js"></script>	
@@ -27,7 +27,7 @@
 		
 		<!-- font awesome 5.0.10 -->
 		
-		<script defer src="css/fontawesome-all.js"></script>
+		<link href="css/fontawesome-all.css" rel="stylesheet">
 		
 		<!-- code piwik pour les stats -->
 		
@@ -53,9 +53,21 @@
 
     		<h4>Historique des versions</h4>
     		
+    			<h5>version 0.4.13 (16/04/18)</h5>
+    			
+    				- Ajout d'un README.md et mise sur GitHub<br />
+    				- Retouches sur charte graphique<br />
+    				- Mise à jour de Bootstrap vers la version 4.1.0 <br />
+    				- Mise à jour de font awesome vers la version 5.0.10<br />
+    				- Mise à jour de Jquery vers la version 3.3.1<br />
+    				- Création d'une page erreur 404<br />
+    				- Mise à jour du contenu<br />
+    				- Optimisation du code source<br />
+    		
     			<h5>version 0.4.6 (13/04/18)</h5>
     			
-    				- Suite du passage à Bootstrap.<br />
+    				- Mise du code source sur Github<br />
+    				- Suite du passage à Bootstrap<br />
     		
     			<h5>version 0.4.5 (13/04/18)</h5>
 
