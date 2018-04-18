@@ -36,8 +36,6 @@
    	</head>
 	
 <body>
-
-<div class="jumbotron vertical-center">	
 	
 <div class="container">
 
@@ -53,7 +51,7 @@
 	<section class="row">
 		<article class="col-md-9">
 
-    	<h4>A quel jour correspond une date ?</h4>
+    	<h3>A quel jour correspond une date ?</h3>
 
     		<h5>Un peu d'histoire</h5>
  	
@@ -66,7 +64,7 @@
 
     		<h5>Trouver un jour</h5>
 
-    		<form method="post" action="jourdelasemaine.php" class="form-inline">
+    		<form method="post" action="jourdelasemaine.php" class="form-inline justify-content-center">
 
             	<label>Jour</label> : 
             
@@ -103,7 +101,7 @@
                 <input type="text" name="annee" class="form-control m-2">
                 </div>
                               
-                <input type="submit" value="Trouver !" class="btn btn-default">
+                <input type="submit" value="Convertir !" class="btn btn-outline-secondary">
 
    			 </form>
 
@@ -161,8 +159,6 @@
  		<?php include('include/footer.php'); ?> 		
  	</footer>
  	
-</div>
-
 </div>
 
 </body>

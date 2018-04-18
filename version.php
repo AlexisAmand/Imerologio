@@ -37,8 +37,6 @@
 	
 <body>
 
-<div class="jumbotron vertical-center">
-
 <div class="container">
 
  	<header class="row">
@@ -53,10 +51,22 @@
 	<section class="row">
  		<article class="col-md-9">
 
-    		<h4>Historique des versions</h4>
+    		<h3>Historique des versions</h3>
+    		
+    			<h5>version 0.5.1 (17/04/18)</h5>
+    			
+      				- Mise du code source sur Github<br />
+    				- Ajout d'une rubrique pour calculer le Jour Julien<br />
+    				- Le projet devient Imerológio<br />
+    				  				
+    			<h5>version 0.5 (17/04/18)</h5>
+    			
+    				- Retouches sur charte graphique<br />
+    				- Ajout formulaire (non actif pour le moment) qui permet de calculer le Jour Julien<br />
     		
     			<h5>version 0.4.14 (16/04/18)</h5>
     		
+    				- Mise du code source sur Github<br />
     				- Suite du passage à Bootstrap<br />
     		
     			<h5>version 0.4.13 (16/04/18)</h5>
@@ -154,12 +164,10 @@
 	
 	</section>
 	
- 	<footer class="row">
+ 	<footer class="row text-center">
  		<?php include('include/footer.php'); ?> 		
  	</footer>
  	
-</div>
-
 </div>
 
 </body>

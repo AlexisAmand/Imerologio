@@ -36,8 +36,6 @@
    	</head>
 	
 <body>
-
-<div class="jumbotron vertical-center">
 	
 <div class="container">
 
@@ -53,7 +51,7 @@
  	<section class="row">
  		<article class="col-md-9">
 
-    	<h4>Convertir une date républicaine en date grégorienne</h4>
+    	<h3>Convertir une date républicaine en date grégorienne</h3>
 
 	    <h5>Un peu d'histoire</h5>
  		
@@ -66,7 +64,7 @@
 	
 	    <h5>Convertir une date</h5>
 	
-	    <form method="post" action="repgreg.php" class="form-inline">
+	    <form method="post" action="repgreg.php" class="form-inline justify-content-center">
 	
 		<div class="form-group">
 	    <label>Jour</label> : 
@@ -131,7 +129,7 @@
 	        }
 	    ?>
 	
-	    <input type="submit" value="Convertir !">
+	    <input type="submit" value="Convertir !" class="btn btn-outline-secondary">
 	
 	    </form>
 	
@@ -241,8 +239,6 @@
  		<?php include('include/footer.php'); ?> 		
  	</footer>
  	
-</div>
-
 </div>
 
 </body>

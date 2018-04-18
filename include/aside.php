@@ -14,6 +14,9 @@
             <a class="list-group-item list-group-item-action" href="paques.php" title="trouver la date de Pâques pour une année donnée">
             <i class="far fa-calendar-times"></i>&nbsp;&nbsp;Quel jour était Pâques ?</a>
             
+            <a id="gregrep"  class='list-group-item list-group-item-action' href="jourjulien.php" title="Convertir une date du calendrier grégorien en date du calendrier républicain">
+        	<i class="far fa-calendar-alt"></i>&nbsp;&nbsp;Calcul du jour julien</a>
+            
             <a class="list-group-item list-group-item-action" href="version.php">
             <i class="far fa-newspaper"></i>&nbsp;&nbsp;Nouveautés</a>
                      

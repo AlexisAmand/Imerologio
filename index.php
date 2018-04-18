@@ -37,8 +37,6 @@
 	
 <body>
 
-<div class="jumbotron vertical-center">
-
 <div class="container">
 
  	<header class="row">
@@ -54,7 +52,7 @@
  	<section class="row">
  		<article class="col-md-9">
  		
- 		<h4>Convertir une date grégorienne en date républicaine </h4>	
+ 		<h3>Convertir une date grégorienne en date républicaine </h3>	
  		
  		<h5>Un peu d'histoire</h5>
  		
@@ -68,7 +66,7 @@
     	<h5>Convertir une date</h5>
  		
  				
- 		<form method="post" action="index.php" class="form-inline">
+ 		<form method="post" action="index.php" class="form-inline justify-content-center">
  			
      		<div class="form-group">
     		<label for="jours">Jour</label>
@@ -129,10 +127,10 @@
                 }
             ?>
     
- 			<input type="submit" value="Convertir !" class="btn btn-default">	
- 			
+ 			<input type="submit" value="Convertir !" class="btn btn-outline-secondary">
+ 						
  	  	</form>
-
+ 	  	 	  	
  	 	<?php 
 
         if (isset($_POST['jour']) and isset($_POST['mois']) and isset($_POST['annee']))
@@ -242,8 +240,6 @@
  		<?php include('include/footer.php'); ?> 		
  	</footer>
  	
-</div>
-
 </div>
 
 </body>

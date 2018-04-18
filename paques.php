@@ -37,8 +37,6 @@
 	
 <body>
 	
-<div class="jumbotron vertical-center">
-	
 <div class="container">
 
  	<header class="row">
@@ -53,7 +51,7 @@
 	<section class="row">
  		<article class="col-md-9">
 
-    	<h4>Quel jour était Pâques ?</h4>
+    	<h3>Quel jour était Pâques ?</h3>
 
  			<h5>Un peu d'histoire</h5>
  	
@@ -61,18 +59,18 @@
  		
  			<h5>Comment ça marche ?</h5>
 
-    		<p>- Indiquez une date entre 1970 et 2037, puis cliquez sur le bouton convertir.</p>
+    		<p>- Indiquez une date entre 1970 et 2037, puis cliquez sur le bouton trouver.</p>
    
     		<h5>Trouver une date</h5>
 
-    		<form method="post" action="paques.php" style="text-align:center;"  class="form-inline">
+    		<form method="post" action="paques.php" style="text-align:center;"  class="form-inline justify-content-center">
 
 				<div class="form-group">
 			    <label>Année</label> : 
 			    <input type="text" name="annee" class="form-control m-2">
 			    </div>
 			    
- 				<input type="submit" value="Trouver !" class="btn btn-default">
+ 				<input type="submit" value="Trouver !" class="btn btn-outline-secondary">
 
    			</form>
   
@@ -131,8 +129,6 @@
  		<?php include('include/footer.php'); ?> 		
  	</footer>
  	
-</div>
-
 </div>
 
 </body>
