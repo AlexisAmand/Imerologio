@@ -53,26 +53,30 @@
 
     		<h3>Historique des versions</h3>
     		
-    			<h5>version 0.5.1 (17/04/18)</h5>
+    			<h5>version 0.5.2 (18/04/18)</h5>
     			
-      				- Mise du code source sur Github<br />
+    				- Petites mises à jour du contenu<br />
+    		
+    			<h5>version 0.5.1 (18/04/18)</h5>
+    			
+      				- Mise du code source sur <a href="https://github.com/AlexisAmand/Imerologio">Github</a><br />
     				- Ajout d'une rubrique pour calculer le Jour Julien<br />
     				- Le projet devient Imerológio<br />
     				  				
     			<h5>version 0.5 (17/04/18)</h5>
     			
-    				- Retouches sur charte graphique<br />
-    				- Ajout formulaire (non actif pour le moment) qui permet de calculer le Jour Julien<br />
+    				- Retouches sur la charte graphique<br />
+    				- Ajout d'un formulaire (non actif pour le moment) qui permet de calculer le Jour Julien<br />
     		
     			<h5>version 0.4.14 (16/04/18)</h5>
     		
-    				- Mise du code source sur Github<br />
+    				- Mise du code source sur <a href="https://github.com/AlexisAmand/Imerologio">Github</a><br />
     				- Suite du passage à Bootstrap<br />
     		
     			<h5>version 0.4.13 (16/04/18)</h5>
     			
-    				- Ajout d'un README.md et mise sur GitHub<br />
-    				- Retouches sur charte graphique<br />
+    				- Ajout d'un README.md et mise sur <a href="https://github.com/AlexisAmand/Imerologio">Github</a><br />
+    				- Retouches sur la charte graphique<br />
     				- Mise à jour de Bootstrap vers la version 4.1.0 <br />
     				- Mise à jour de font awesome vers la version 5.0.10<br />
     				- Mise à jour de Jquery vers la version 3.3.1<br />
@@ -82,31 +86,31 @@
     		
     			<h5>version 0.4.6 (13/04/18)</h5>
     			
-    				- Mise du code source sur Github<br />
+    				- Mise du code source sur <a href="https://github.com/AlexisAmand/Imerologio">Github</a><br />
     				- Suite du passage à Bootstrap<br />
     		
     			<h5>version 0.4.5 (13/04/18)</h5>
 
-					- Mise du code source sur Github<br />
+					- Mise du code source sur <a href="https://github.com/AlexisAmand/Imerologio">Github</a><br />
 					- Ajout de Font Awesome 5.0.9<br />
-					- J'ai enlevé la version "sans BT" de GitHub<br />
+					- J'ai enlevé la version "sans Bootstrap" de GitHub<br />
     
     			<h5>version 0.4.3 (13/04/18)</h5>
     
-    				- Mise du code source sur Github<br />
-    				- La page "Jour de Pâques" est maintenant disponible.<br />
-    				- Suite du passage à Bootstrap.<br />
+    				- Mise du code source sur <a href="https://github.com/AlexisAmand/Imerologio">Github</a><br />
+    				- La page "Jour de Pâques" est maintenant disponible<br />
+    				- Suite du passage à Bootstrap<br />
     				- Ajout des class gregorians et republicans pour optimiser le code source.<br />
     
     			<h5>version 0.4 (05/04/18)</h5>
     
-                    - Le projet utilise maintenant Bootstrap.<br />
-                    - La feuille de style est dans un fichier externe.<br />
+                    - Le projet utilise maintenant Bootstrap<br />
+                    - La feuille de style est dans un fichier externe<br />
     
                 <h5>version 0.3.5 (21/03/18)</h5>
                 
-                    - petite mise à jour des css<br />
-                    - dépot du code source sur GitHub<br />
+                    - Petite mise à jour des css<br />
+                    - Dépot du code source sur <a href="https://github.com/AlexisAmand/Imerologio">Github</a><br />
                 
                 <h5>version 0.3.4 (19/03/18)</h5>
                 
@@ -116,42 +120,42 @@
                 <h5>version 0.3.2 (14/11/17)</h5>
     
                     - 45/46 avertissements PHP a corrigé<br />
-                    - les feuilles de style sont dans un fichier externe pour alleger le chargement des pages<br />
+                    - Les feuilles de style sont dans un fichier externe pour alleger le chargement des pages<br />
     
     			<h5>version 0.3 (13/11/17)</h5>
     
-    				- le projet est maintenant gérer via github<br />
+    				- Le projet est maintenant géré via <a href="https://github.com/AlexisAmand/Imerologio">Github</a><br />
     
     			<h5>version 0.3 (18/11/15)</h5>
     
-                    - mise en ligne du convertisseur gregorien -> républicain<br />
-                    - ajout du code piwik<br />
-                    - ajout d'un historique des dernières conversions<br />
-                    - modification de la charte graphique pour que ce soit plus joli :)<br />
+                    - Mise en ligne du convertisseur gregorien -> républicain<br />
+                    - Ajout du code Piwik<br />
+                    - Ajout d'un historique des dernières conversions<br />
+                    - Modification de la charte graphique pour que ce soit plus joli :)<br />
     
     			<h5>version 0.2 (19/11/15)</h5>
     
-                    - préparation page du convertisseur gregorien -> républicain<br />
-                    - ajout d'un menu pour basculer entre les convertisseurs<br />
-                    - ajout pub<br />
-                    - ajout du convertisseur republicain vers grégorien<br/>
-                    - ajout d'une page qui proposera le script qui permet de trouver à quel jour de la semaine correspond une date donnée.<br/>
-                    - encore qq problèmes mais le script "quel est la date du jour" est fonctionnel<br/>
+                    - Préparation de la page du convertisseur gregorien -> républicain<br />
+                    - Ajout d'un menu pour basculer entre les convertisseurs<br />
+                    - Ajout pub<br />
+                    - Ajout du convertisseur republicain vers grégorien<br/>
+                    - Ajout d'une page qui proposera le script qui permet de trouver à quel jour de la semaine correspond une date donnée.<br/>
+                    - Encore quelques problèmes mais le script "quelle est la date du jour" est fonctionnel<br/>
     
     			<h5>version 0.2.1 (20/11/15)</h5>
     
-                    - retouches sur la mise en page<br />
-                    - ajout des title=""<br />
-                    - tooltips sur les liens du menu (???)<br />
-                    - modification du header pour que ce soit un peu plus en rapport avec le thème<br />
-                    - modification de l'affichage des dernières dates converties<br />
+                    - Retouches sur la mise en page<br />
+                    - Ajout des title=""<br />
+                    - Tooltips sur les liens du menu (???)<br />
+                    - Modification du header pour que ce soit un peu plus en rapport avec le thème<br />
+                    - Modification de l'affichage des dernières dates converties<br />
     
     			<h5>version 0.2.2</h5>
     
-                    - des tooltips sont dispos sur tous les éléments du menu<br />
+                    - Des tooltips sont dispos sur tous les éléments du menu<br />
                     - GWT : 4 urls soumises et 3 urls enregistrées<br />
-                    - resolution d'un bug lié à l'encodage en utf-8 des caractères<br />
-                    - modification de la balise meta de la page "jour d'une date"<br />
+                    - Résolution d'un bug lié à l'encodage en utf-8 des caractères<br />
+                    - Modification de la balise meta de la page "jour d'une date"<br />
     
 		</article>
     

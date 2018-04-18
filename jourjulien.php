@@ -9,8 +9,8 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width,initial-scale=1.0">
 
-		<title>A quel jour de la semaine correspond cette date ?</title>
-		<meta name="description" content="Application en ligne pour trouver à quel jour de la semaine correspond une date donnée">
+		<title>Calcul du jour julien</title>
+		<meta name="description" content="Application en ligne pour calculer le jour julien d'une date donnée">
 
         <!-- Jquery 3.3.1 -->
     	
@@ -50,8 +50,7 @@
 
 	<section class="row">
 		<article class="col-md-9">
-
-    	
+ 	
 	    	<h3>Calcul du Jour julien</h3>
 	    	
 	    	<h5>Un peu d'histoire</h5>
@@ -118,14 +117,9 @@
 					
 					echo "<p class='alert alert-success'>Le ".$gregorian->day." ".$gregorian->month." ".$gregorian->year." est le jour julien ".$jd."</p>";
 					}
-				
-				// fonction cal_to_jd en PHP
-				// http://php.net/manual/fr/function.cal-to-jd.php
-				
+								
 				?>
- 						
- 	  
-				  
+ 										  
 		</article>
    
     	<aside class="col-md-3">

@@ -59,9 +59,9 @@
  		
  			<h5>Comment ça marche ?</h5>
 
-    		<p>- Indiquez une date entre 1970 et 2037, puis cliquez sur le bouton trouver.</p>
+    		<p>- Indiquez une date entre 1970 et 2037, puis cliquez sur le bouton trouver. Une mise à jour utilisant l'algorithme de Butcher/Meeus est en cours de développement. Elle permettra une recherche à partir de l'année 1583, premiére Pâques du calendrier grégorien instauré en 1582.</p>
    
-    		<h5>Trouver une date</h5>
+    		<h5>Trouver la date de Pâques</h5>
 
     		<form method="post" action="paques.php" style="text-align:center;"  class="form-inline justify-content-center">
 
@@ -104,7 +104,7 @@
              		}
              	else 
              		{
-             		echo "<p class='alert alert-warning'>La date entrée n'est pas correcte ! Elle doit....</p>";
+             		echo "<p class='alert alert-warning'>La date entrée n'est pas correcte ! Elle doit être comprise en 1970 et 2037.</p>";
              		}
             	}
         	else

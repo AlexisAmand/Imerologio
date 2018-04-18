@@ -9,8 +9,8 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width,initial-scale=1.0">
 
-		<title>A quel jour de la semaine correspond cette date ?</title>
-		<meta name="description" content="Application en ligne pour trouver à quel jour de la semaine correspond une date donnée">
+		<title>Erreur 404</title>
+		<meta name="description" content="La page que vous cherchez n'a pas été trouvée.">
 
         <!-- Jquery 3.3.1 -->
     	
@@ -53,7 +53,7 @@
  
     	<h3>Erreur 404 !</h3>
     	
-    	<p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>   	
+    	<p class="text-justify">La page que vous cherchez n'a pas été trouvée.</p>   	
     	
     	</article>
    
