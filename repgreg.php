@@ -55,12 +55,12 @@
 
 	    <h5>Un peu d'histoire</h5>
  		
- 		<p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+ 		<p class="text-justify">Le calendrier républicain est un calendrier révolutionnaire français qui a été mis en place durant la Révolution française. Il débute le 1er vendémiaire an I (jour de proclamation de la République) mais entre en vigueur seulement à partir du 15 vendémiaire an II. Il était découpé en 12 mois de 30 jours, auquel on ajoutait cinq ou six jours complémentaires selon les années. Le calendrier républicain est abrogé par Napoléon le 22 fructidor an XIII (9 septembre 1805) par un sénatus-consulte qui fixe le rétour au calendrier grégorien dés le 11 nivôse suivant (1er janvier 1806).</p>
  		
  		<h5>Comment ça marche ?</h5>
 	
 	    <p>- Indiquez votre date et cliquez sur le bouton convertir.<br />
-	    - Cet outil convertit les dates comprises entre l'an I et l'an XIV (22 Septembre 1792 à 22 Septembre 1806 en calendrier grégorien). Il couvre uniquement la durée d'existence du calendrier, mais c'est pour des raisons techniques.</p>
+	    - Cet outil convertit les dates comprises entre l'an I et l'an XIV (22 Septembre 1792 à 22 Septembre 1806 en calendrier grégorien).</p>
 	
 	    <h5>Convertir une date</h5>
 	

@@ -58,6 +58,16 @@ class gregorians
     public $month;
     public $year;
     
+    public function Epacte($a)
+    	{
+    	// $a = 2008;
+    	$c = (int)($a / 100);
+    	$e = (11 * ($a % 19) + 8 - $c + (int)($c / 4) + (int)((8 * $c + 13) / 25)) % 30;
+    	
+    	return $e;
+    	}
+ 
+    
     public function JourEnLettre($j)
     	{
 		switch($j)

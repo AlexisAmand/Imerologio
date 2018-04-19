@@ -56,7 +56,7 @@
  		
  		<h5>Un peu d'histoire</h5>
  		
- 		<p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+ 		<p class="text-justify">Le calendrier grégorien a été concu par Christophorus Clavius à la demande du pae Grégoire XIII pour corriger la dérive du calendrier julien qui était en usage depuis 46 avant Jésus-Christ. Il est adopté le 24 février 1582 et appliqué le 15 octobre 1582. Il va ensuite s'imposer dans le monde entier pour les usages civils, parfois en parallèle aux calendriers traditionnels ou religieux. En France, le passage se fit dès décembre 1582.</p>
  		
  		<h5>Comment ça marche ?</h5>
 

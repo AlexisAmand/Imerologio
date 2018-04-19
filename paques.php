@@ -55,11 +55,11 @@
 
  			<h5>Un peu d'histoire</h5>
  	
- 			<p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+ 			<p class="text-justify">La date de Pâques est fixée par le Concile de Nicée de 325 qui la défini ainsi: <em>"Pâques est le dimanche qui suit le 14e jour de la Lune qui atteint cet âge le 21 mars ou immédiatement après"</em>. Pâques tombe donc entre le 22 mars et le 25 avril de chaque année. À partir du début du XVIIIe siècle, les mathématiciens recherchent des méthodes simplifiant le calcul de la date de Pâques: Gauss (1800), Meeus (1876) ou encore Conway (1980). J'ai choisi l'agorithme de Meeus car c'est le plus exact pour une date supérieure à 1583.</p>
  		
  			<h5>Comment ça marche ?</h5>
 
-    		<p>- Indiquez une date entre 1970 et 2037, puis cliquez sur le bouton trouver. Une mise à jour utilisant l'algorithme de Butcher/Meeus est en cours de développement. Elle permettra une recherche à partir de l'année 1583, premiére Pâques du calendrier grégorien instauré en 1582.</p>
+    		<p>- Indiquez une date supérieure à 1583, puis cliquez sur le bouton trouver.</p>
    
     		<h5>Trouver la date de Pâques</h5>
 
@@ -75,43 +75,78 @@
    			</form>
   
     	<?php 
-
+    	
     	if (isset($_POST['annee']))
         	{
-        	if (!empty($_POST['annee']))
-           		{
-            	if (($_POST['annee'] >= '1970') and ($_POST['annee'] <= '2037'))	
-            		{
-            		$year = $_POST['annee'];
-         
-           			/* unixtojd : timestamp UNIX vers Jour Julien */
-            
-            		$unix = unixtojd(easter_date($year));
-            
-            		/* jdtogregorian : Jour Julien vers calendrier gregorien */
-        
-            		$resultat = jdtogregorian($unix);
-            		$dateunix = explode("/", $resultat);
-	            
-	            	$gregorian = new gregorians;  
-	            
-	            	$gregorian->day = $dateunix[1];
-	            	$gregorian->year = $dateunix[2];
-	                      
-	            	$gregorian->month = $gregorian->MoisEnLettre($dateunix[0]);
-            
-					echo "<p class='alert alert-success'>En ".$gregorian->year.", Pâques est le ".$gregorian->day." ".$gregorian->month."</strong></p>";   
+        			/* Je n'ai pas utilisé la fonction easter_date() */
+        			/* car elle est limité à une date en 1970 et 2037 */
+           			             		
+            		$paques = new gregorians;
+            		
+            		$paques->year = $_POST['annee'];
+            		
+            		/*
+            		$quotient = (int)($divisor / $dividend);
+            		$remainder = $divisor % $dividend;
+            		*/
+            		
+            		/* cycle de Méton */
+            		
+            		$n = $paques->year % 19;
+            		
+            		/* centaine et rang de l'année */
+            		
+            		$u = $paques->year % 100;
+            		$c = (int)($paques->year / 100);
+            		
+            		/* siècle bissextile */
+            		
+            		$t = $c % 4;
+            		$s = (int)($c / 4);
+            		
+            		/* cycle de proemptose */
+
+            		$p = (int)(($c + 8) / 25);
+            		
+            		/* proemptose */
+            		
+            		$q = (int)(($c - $p + 1 ) / 3);
+            		
+            		/* épacte */
+            		
+            		$e = (19 * $n + $c - $s - $q + 15) % 30;
+            		
+            		/* année bissextile */
+            		
+            		$d = $u % 4;
+            		$b = (int)($u / 4);
+            		
+            		/* lettre dominicale */
+            		
+            		$L = (2 * $t + 2 * $b - $e - $d + 32) % 7;
+            		
+            		/* correction */
+            		
+            		$h = (int)(($n + 11 * $e + 22 * $L) / 451);
+            		
+            		/* mois et quantième du Samedi saint */
+            		
+            		$j = ($e + $L - 7 * $h + 114) % 31;
+            		$m = (int)(($e + $L - 7 * $h + 114) / 31);
+            		
+            		/* mois et quantième de pâques */
+            		         		
+               		$paques->day = $j + 1;
+               		$paques->month = $paques->MoisEnLettre($m);
+           			                            
+               		echo "<p class='alert alert-success'>En ".$paques->year.", Pâques est le ".$paques->day." ".$paques->month."</strong></p>";   
              		}
              	else 
              		{
-             		echo "<p class='alert alert-warning'>La date entrée n'est pas correcte ! Elle doit être comprise en 1970 et 2037.</p>";
+             		echo "<p class='alert alert-warning'>La date entrée n'est pas correcte ! Elle doit être supérieure à 1583.</p>";
              		}
-            	}
-        	else
-           		{
-           		echo "<p class='alert alert-warning'>La date entrée n'est pas correcte !</p>";
-           		}  
-        	}
+
+        
            
     	?>
 

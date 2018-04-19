@@ -53,9 +53,21 @@
 
     		<h3>Historique des versions</h3>
     		
+    			<h5>TODO</h5>
+    			
+    				- Si Épacte = 25 et que le nombre d'or N = RESTE(Année /19) > 10, alors Épacte = 26.
+    				- Texte sur Épacte
+    		
+    			<h5>version 0.6.0 (19/04/18)</h5>
+    			
+    				- Mise à jour des metas<br />
+    				- Mise à jour du contenu (textes)<br />
+    				- Utilisation de l'agorithme de Meeus pour le calcul de la date de pâques<br />
+    				- Ajout du calcul de l'épacte grégorienne<br />
+    				    				    		
     			<h5>version 0.5.2 (18/04/18)</h5>
     			
-    				- Petites mises à jour du contenu<br />
+    				- Mise à jour du contenu (textes)<br />
     		
     			<h5>version 0.5.1 (18/04/18)</h5>
     			
