@@ -53,11 +53,7 @@
 
     	<h3>A quel jour correspond une date ?</h3>
 
-    		<h5>Un peu d'histoire</h5>
- 	
-		 	<p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-		 		
-		 	<h5>Comment ça marche ?</h5>
+   		 	<h5>Comment ça marche ?</h5>
 
     		<p>- Indiquez votre date et cliquez sur le bouton "Trouver !".<br />
     		- Votre date doit être composée de 4 chiffres !</p>
@@ -101,7 +97,7 @@
                 <input type="text" name="annee" class="form-control m-2">
                 </div>
                               
-                <input type="submit" value="Convertir !" class="btn btn-outline-secondary">
+                <input type="submit" value="Trouver !" class="btn btn-outline-secondary">
 
    			 </form>
 

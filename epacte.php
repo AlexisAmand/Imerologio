@@ -52,10 +52,6 @@
  		<article class="col-md-9">
 
     	<h3>Calcul de l'épacte grégorienne</h3>
-
- 			<h5>Un peu d'histoire</h5>
- 	
- 			<p class="text-justify"> </p>
  		
  			<h5>Comment ça marche ?</h5>
 
