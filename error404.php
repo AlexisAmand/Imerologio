@@ -9,7 +9,7 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width,initial-scale=1.0">
 
-		<title>Erreur 404</title>
+		<title>Erreur 404 | <?php echo SITE_TITLE; ?></title>
 		<meta name="description" content="La page que vous cherchez n'a pas été trouvée.">
 
         <!-- Jquery 3.3.1 -->

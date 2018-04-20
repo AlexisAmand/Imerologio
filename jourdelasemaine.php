@@ -9,7 +9,7 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width,initial-scale=1.0">
 
-		<title>A quel jour de la semaine correspond cette date ?</title>
+		<title>A quel jour de la semaine correspond cette date ? | <?php echo SITE_TITLE; ?></title>
 		<meta name="description" content="Application en ligne pour trouver à quel jour de la semaine correspond une date donnée">
 
         <!-- Jquery 3.3.1 -->

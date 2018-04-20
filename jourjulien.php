@@ -9,7 +9,7 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width,initial-scale=1.0">
 
-		<title>Calcul du jour julien</title>
+		<title>Calcul du jour julien | <?php echo SITE_TITLE; ?></title>
 		<meta name="description" content="Application en ligne pour calculer le jour julien d'une date donnée">
 
         <!-- Jquery 3.3.1 -->

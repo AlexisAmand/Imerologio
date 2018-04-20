@@ -9,7 +9,7 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width,initial-scale=1.0">
 		
-		<title>Conversion du calendrier grégorien vers le calendrier républicain</title>
+		<title>Conversion du calendrier grégorien vers le calendrier républicain | <?php echo SITE_TITLE; ?></title>
 		<meta name="description" content="Application en ligne permettant de convertir une date du calendrier grégorien en date du calendrier républicain">
 		
 		<meta name="google-site-verification" content="NrJvg2SL3r8GToGISpF-SJatGnKIvS5mekxb-2uTef4" />

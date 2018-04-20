@@ -9,7 +9,7 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width,initial-scale=1.0">
 
-		<title>Trouver quel jour était Pâques</title>
+		<title>Trouver quel jour était Pâques | <?php echo SITE_TITLE; ?></title>
 		<meta name="description" content="Application en ligne pour trouver quelle était la date de Pâques pour une année donnée">
 
         <!-- Jquery 3.3.1 -->

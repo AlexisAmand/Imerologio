@@ -9,7 +9,7 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width,initial-scale=1.0">
 
-		<title>Calcul de l'épacte grégorienne</title>
+		<title>Calcul de l'épacte grégorienne | <?php echo SITE_TITLE; ?></title>
 		<meta name="description" content="Application en ligne pour calculer l'épacte grégorienne d'une année donnée">
 
         <!-- Jquery 3.3.1 -->
@@ -90,13 +90,24 @@
 	    	 	$gregorian = new gregorians;
 	    		
 	    		$gregorian->year = $_POST['annee'];
-	        		
-	    		echo "<p class='alert alert-success'>L'épacte de ".$gregorian->year." est ".$gregorian->Epacte($gregorian->year)."</strong></p>";
+	    		
+	    		$epacte = $gregorian->Epacte($gregorian->year);
+	    		
+	    		// Si Épacte = 25 et que le nombre d'or N = (Année % 19) > 10, alors Épacte = 26.<br />	
+	    		
+	    		if (($epacte == 25) and ($gregorian->year % 19 > 10))
+	    			{
+	    			$epacte = 26;
+	    			}
+	        	else
+	        		{
+	    			echo "<p class='alert alert-success'>L'épacte de ".$gregorian->year." est ".$epacte ."</strong></p>";
+	    			}
 	    		}
 	    	else
-	    		{
-	    		echo "<p class='alert alert-warning'>La date entrée n'est pas bonne !</strong></p>";
-	    		}
+    			{
+    			echo "<p class='alert alert-warning'>La date entrée n'est pas bonne !</strong></p>";
+    			}
 	    	}
         ?>
   

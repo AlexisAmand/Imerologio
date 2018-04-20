@@ -9,7 +9,7 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width,initial-scale=1.0">
 
-		<title>Historique des versions</title>
+		<title>Historique des versions | <?php echo SITE_TITLE; ?></title>
 		<meta name="description" content="Historique des versions">
 
     	<!-- Jquery 3.3.1 -->
@@ -53,17 +53,21 @@
 
     		<h3>Historique des versions</h3>
     		
-    			<h5>TODO</h5>
+    			<h5>Version 0.6.3 (20/04/18)</h5>
     			
-    				- Si Épacte = 25 et que le nombre d'or N = (Année % 19) > 10, alors Épacte = 26.<br />	
+    				- Mise à jour du contenu (textes) et des metas<br />
+    				- Mise à jour du script de calcul de l'épacte grégorienne<br />
+    				
     				   	
     			<h5>Version 0.6.1 (20/04/18)</h5>
-    	
+    			
+    				- Mise du code source sur <a href="https://github.com/AlexisAmand/Imerologio">Github</a><br />
     				- Mise en ligne de la nouveau version<br />		
     				- Mise à jour du contenu (textes)<br />
     		
     			<h5>version 0.6.0 (19/04/18)</h5>
     			
+    				- Mise du code source sur <a href="https://github.com/AlexisAmand/Imerologio">Github</a><br />
     				- Mise à jour des metas<br />
     				- Mise à jour du contenu (textes)<br />
     				- Utilisation de l'agorithme de Meeus pour le calcul de la date de pâques<br />
@@ -71,6 +75,7 @@
     				    				    		
     			<h5>version 0.5.2 (18/04/18)</h5>
     			
+    				- Mise du code source sur <a href="https://github.com/AlexisAmand/Imerologio">Github</a><br />
     				- Mise à jour du contenu (textes)<br />
     		
     			<h5>version 0.5.1 (18/04/18)</h5>
