@@ -37,6 +37,8 @@
 	
 <body>
 
+
+
 <div class="container">
 
  	<header class="row">
@@ -52,6 +54,15 @@
  		<article class="col-md-9">
 
     		<h3>Historique des versions</h3>
+
+
+				<h5>Bugs</h5>
+
+					- Quand on arrive sur la page paques.php il y a un msg indiquant que la date n'est pas bonne
+    		
+    			<h5>Version 0.6.4 (20/04/18)</h5>
+
+    				- Mise à jour du contenu (textes)<br />
     		
     			<h5>Version 0.6.3 (20/04/18)</h5>
     			

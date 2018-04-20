@@ -1,5 +1,5 @@
-<?php require('class/class.php'); ?>
-<?php require('config.php');?>
+<?php require('../class/class.php'); ?>
+<?php require('../config.php');?>
 
 <!DOCTYPE html>
 
@@ -16,24 +16,28 @@
 						
     	<!-- Jquery 3.3.1 -->
     	
-    	<script src="js/jquery-3.3.1.min.js"></script>						
+    	<script src="../js/jquery-3.3.1.min.js"></script>						
 						
 		<!-- Bootstrap 4.1.0 -->
 		
-		<link href="css/bootstrap.css" rel="stylesheet">	
-		<script src="js/bootstrap.min.js"></script>	
+		<link href="../css/bootstrap.css" rel="stylesheet">	
+		<script src="../js/bootstrap.min.js"></script>	
 
 		<!-- CSS perso -->
 		
-		<link href="css/style.css" rel="stylesheet">
+		<link href="../css/style.css" rel="stylesheet">
 		
 		<!-- font awesome 5.0.10 -->
 		
-		<link href="css/fontawesome-all.css" rel="stylesheet">
+		<link href="../css/fontawesome-all.css" rel="stylesheet">
 		
 		<!-- code piwik pour les stats -->
 		
-		<?php include('include/piwik.php'); ?>
+		<?php include('../include/piwik.php'); ?>
+		
+		<!-- test -->
+		
+		<link href="flags/flags.css" rel="stylesheet">	
 
    	</head>
 	
@@ -42,6 +46,40 @@
 <div class="container">
 
  	<header class="row">
+ 	
+ 		<div class="col-md-12">
+ 		
+		<?php 
+		
+		
+		
+		if (isset($_GET['langue']))
+			{
+			$lg = $_GET['langue'];
+				
+			/* la langue est mise dans le cookie */	
+			setcookie('langue',$lg);
+			
+			/* test du contenu du cookie */
+			echo "la page est en ".$_COOKIE['langue'];
+			
+			/* include de la langue qui correspond */
+			}
+		else
+			{
+			/* si pas de langue choisie, c'est en fr par défaut */	
+			/* include de la langue fr */
+			setcookie('langue', 'fr');
+			echo "la page est en ".$_COOKIE['langue'];
+			}
+		
+		?>
+ 		
+ 		<br />
+ 		
+ 		<a href="?langue=fr"><img src="flags/blank.gif" class="flag flag-fr" alt=" " /></a>
+ 		<a href="?langue=gb"><img src="flags/blank.gif" class="flag flag-gb" alt=" " /></a>
+ 		</div>
 		 	
  		<div class="col-md-12">
  		
@@ -54,11 +92,11 @@
  	<section class="row">
  		<article class="col-md-9">
  		
- 		<h3>Convertir une date grégorienne en date républicaine </h3>	
+ 		<h3>Page de tests divers</h3>	
  		
  		<h5>Un peu d'histoire</h5>
  		
- 		<p class="text-justify">Le calendrier grégorien a été concu par Christophorus Clavius à la demande du pape Grégoire XIII pour corriger la dérive du calendrier julien qui était en usage depuis 46 avant Jésus-Christ. Il est adopté le 24 février 1582 et appliqué le 15 octobre 1582. Il va ensuite s'imposer dans le monde entier pour les usages civils, parfois en parallèle aux calendriers traditionnels ou religieux. En France, le passage se fit dès décembre 1582.</p>
+ 		<p class="text-justify">Le calendrier grégorien a été concu par Christophorus Clavius à la demande du pae Grégoire XIII pour corriger la dérive du calendrier julien qui était en usage depuis 46 avant Jésus-Christ. Il est adopté le 24 février 1582 et appliqué le 15 octobre 1582. Il va ensuite s'imposer dans le monde entier pour les usages civils, parfois en parallèle aux calendriers traditionnels ou religieux. En France, le passage se fit dès décembre 1582.</p>
  		
  		<h5>Comment ça marche ?</h5>
 
@@ -176,7 +214,7 @@
 		
  		<aside class="col-md-3">
  				
- 			<?php include('include/aside.php');?>
+ 			<?php include('../include/aside.php');?>
  		
  		<br />
  		
@@ -239,7 +277,7 @@
  	</section>
  	
  	<footer class="row">
- 		<?php include('include/footer.php'); ?> 		
+ 		<?php include('../include/footer.php'); ?> 		
  	</footer>
  	
 </div>
