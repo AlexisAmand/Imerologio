@@ -78,6 +78,9 @@
     	
     	if (isset($_POST['annee']))
         	{
+        		if (!empty($_POST['annee']))
+        		{
+        		
         			/* Je n'ai pas utilisé la fonction easter_date() */
         			/* car elle est limité à une date en 1970 et 2037 */
            			             		
@@ -145,6 +148,8 @@
              		{
              		echo "<p class='alert alert-warning'>La date entrée n'est pas correcte ! Elle doit être supérieure à 1583.</p>";
              		}
+        	}
+       
 
         
            

@@ -55,10 +55,9 @@
 
     		<h3>Historique des versions</h3>
 
+				<h5>Version 0.6.5 (23/04/18)</h5>
 
-				<h5>Bugs</h5>
-
-					- Quand on arrive sur la page paques.php il y a un msg indiquant que la date n'est pas bonne
+					- [BUGFIX] Quand on arrivait sur la page paques.php, il y avait un msg indiquant que la date n'est pas bonne
     		
     			<h5>Version 0.6.4 (20/04/18)</h5>
 
