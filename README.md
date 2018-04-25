@@ -8,3 +8,4 @@ Imerológio est un outil en PHP qui permet de faire des calculs sur les dates.
 4. Trouver la date de Pâques 
 5. Calcul du jour julien
 6. Calcul de l'épacte grégorienne
+7. L'année est-elle bissextile ?

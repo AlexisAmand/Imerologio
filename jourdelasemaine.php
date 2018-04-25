@@ -9,8 +9,8 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width,initial-scale=1.0">
 
-		<title>A quel jour de la semaine correspond cette date ? | <?php echo SITE_TITLE; ?></title>
-		<meta name="description" content="Application en ligne utilisant l'algorithme de Mike Keith pour trouver à quel jour de la semaine correspond une date donnée">
+		<title>Trouver à quel jour de la semaine correspond une date | <?php echo SITE_TITLE; ?></title>
+		<meta name="description" content="Application en ligne utilisant l'algorithme de Mike Keith pour trouver à quel jour de la semaine correspond une date donnée du calendrier grégorien">
 
         <!-- Jquery 3.3.1 -->
     	
@@ -52,6 +52,10 @@
 		<article class="col-md-9">
 
     	<h3>A quel jour correspond une date ?</h3>
+    	
+    		<h5>Un peu d'histoire</h5>
+    	
+    		<p>Ce formulaire utilise l'algorithme de Mike Keith pour vous aider à trouver à quel jour de la semaine correspond une date donnée du calendrier grégorien. Il a initialement été publié en 1990 dans un article du <em>Journal of Recrational Mathematics (Vol. 22, No. 4, 1990, p. 280).</em></p> 
 
    		 	<h5>Comment ça marche ?</h5>
 

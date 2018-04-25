@@ -10,7 +10,7 @@
 		<meta name="viewport" content="width=device-width,initial-scale=1.0">
 
 		<title>L'année est-elle bissextile ? | <?php echo SITE_TITLE; ?></title>
-		<meta name="description" content=" ">
+		<meta name="description" content="Trouver si une année du calendrier grégorien est bissextile">
 
         <!-- Jquery 3.3.1 -->
     	

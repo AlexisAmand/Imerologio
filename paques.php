@@ -10,7 +10,7 @@
 		<meta name="viewport" content="width=device-width,initial-scale=1.0">
 
 		<title>Trouver quel jour était Pâques | <?php echo SITE_TITLE; ?></title>
-		<meta name="description" content="Application en ligne utilisant l'algorithme de Meeus pour trouver quelle était la date de Pâques pour une année donnée">
+		<meta name="description" content="Application en ligne utilisant l'algorithme de Meeus pour trouver quelle était la date de Pâques pour une année donnée du calendrier grégorien">
 
         <!-- Jquery 3.3.1 -->
     	
