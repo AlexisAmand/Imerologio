@@ -20,7 +20,7 @@
 						
 		<!-- Bootstrap 4.1.0 -->
 		
-		<link href="css/bootstrap.css" rel="stylesheet">	
+		<link href="css/bootstrap.min.css" rel="stylesheet">	
 		<script src="js/bootstrap.min.js"></script>	
 
 		<!-- CSS perso -->
@@ -29,7 +29,7 @@
 		
 		<!-- font awesome 5.0.10 -->
 		
-		<link href="css/fontawesome-all.css" rel="stylesheet">
+		<link href="css/fontawesome-all.min.css" rel="stylesheet">
 		
 		<!-- code piwik pour les stats -->
 		
@@ -58,7 +58,7 @@
  		
  		<h5>Un peu d'histoire</h5>
  		
- 		<p class="text-justify">Le calendrier grégorien a été concu par Christophorus Clavius à la demande du pape Grégoire XIII pour corriger la dérive du calendrier julien qui était en usage depuis 46 avant Jésus-Christ. Il est adopté le 24 février 1582 et appliqué le 15 octobre 1582. Il va ensuite s'imposer dans le monde entier pour les usages civils, parfois en parallèle aux calendriers traditionnels ou religieux. En France, le passage se fit dès décembre 1582.</p>
+ 		<p class="text-justify">Le calendrier grégorien a été conçu par Christophorus Clavius à la demande du pape Grégoire XIII pour corriger la dérive du calendrier julien qui était en usage depuis 46 avant Jésus-Christ. Il est adopté le 24 février 1582 et appliqué le 15 octobre 1582. Il va ensuite s'imposer dans le monde entier pour les usages civils, parfois en parallèle aux calendriers traditionnels ou religieux. En France, le passage se fit dès décembre 1582.</p>
  		
  		<h5>Comment ça marche ?</h5>
 

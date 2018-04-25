@@ -59,7 +59,7 @@
    
     		<h5>Calculer l'épacte</h5>
 
-    		<form method="post" action="epacte.php" style="text-align:center;"  class="form-inline justify-content-center">
+    		<form method="post" action="epacte.php" class="form-inline justify-content-center">
 
 				<div class="form-group">
 			    <label>Année</label> : 
@@ -110,6 +110,8 @@
     			}
 	    	}
         ?>
+        
+        
   
 
 		</article>

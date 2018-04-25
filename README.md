@@ -7,3 +7,4 @@ Imerológio est un outil en PHP qui permet de faire des calculs sur les dates.
 3. Trouver à quel jour de la semaine correspond une date
 4. Trouver la date de Pâques 
 5. Calcul du jour julien
+6. Calcul de l'épacte grégorienne

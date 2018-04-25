@@ -19,9 +19,6 @@
         	
         	<a id="gregrep"  class='list-group-item list-group-item-action' href="epacte.php" title="Trouver la valeur de l'épacte pour une année donnée">
         	<i class="far fa-calendar-check"></i>&nbsp;&nbsp;Calcul de l'épacte grégorienne</a>
-            
-            <a class="list-group-item list-group-item-action" href="version.php">
-            <i class="far fa-newspaper"></i>&nbsp;&nbsp;Nouveautés</a>
-                     
+                                 
         </div>   
 </div>

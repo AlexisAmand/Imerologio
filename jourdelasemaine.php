@@ -10,7 +10,7 @@
 		<meta name="viewport" content="width=device-width,initial-scale=1.0">
 
 		<title>A quel jour de la semaine correspond cette date ? | <?php echo SITE_TITLE; ?></title>
-		<meta name="description" content="Application en ligne pour trouver à quel jour de la semaine correspond une date donnée">
+		<meta name="description" content="Application en ligne utilisant l'algorithme de Mike Keith pour trouver à quel jour de la semaine correspond une date donnée">
 
         <!-- Jquery 3.3.1 -->
     	
@@ -102,6 +102,10 @@
    			 </form>
 
      		<?php 
+     		
+     		/* Algorithme utilisant les fonctions de PHP */
+     		
+     		/*
 
             if (isset($_POST['jour']) and isset($_POST['mois']) and isset($_POST['annee']))
                 {
@@ -125,10 +129,45 @@
                     {
                     echo "<p class='alert alert-warning'>La date entrée n'est pas correcte !</p>";
                     }    
+           		 }
+                
+            */ 
+                
+            /* Algorithme de Mike Keith */
+                
+            if (isset($_POST['jour']) and isset($_POST['mois']) and isset($_POST['annee']))
+            	{
+                if ($_POST['annee'] >= 1583 )
+                	{
+                	$gregorian = new gregorians;
+                	
+                	$gregorian->day = $_POST['jour'];
+                	$gregorian->month = $_POST['mois'];
+                	$gregorian->year = $_POST['annee'];
+                	
+                	if ($gregorian->month >= 3)
+                		{
+                		$z = $gregorian->year;
+                		$day = (((23 * $gregorian->month) / 9) + $gregorian->day + 4 + $gregorian->year + ($z / 4) - ($z / 100) + ($z / 400) - 2 ) % 7;
+                		}
+                	else
+                		{
+                		$z = $gregorian->year - 1;
+                		$day =  (((23 * $gregorian->month) / 9)+ $gregorian->day + 4 + $gregorian->year + ($z / 4) - ($z / 100) + ($z / 400) ) % 7;
+                		}
+                			
+                	$day = $gregorian->JourEnLettre($day); 
+                	$gregorian->month = $gregorian->MoisEnLettre($gregorian->month);
+                			
+                	echo "<p class='alert alert-success'> Le ".$gregorian->day." ".$gregorian->month." ".$gregorian->year." est un <strong>".$day."</strong></p>";   
+                	}
+                else
+                	{
+                	echo "<p class='alert alert-warning'>La date entrée n'est pas correcte ! Elle doit être supérieure à 1583.</p>";
+                	}                 	       	
                 }
-        
             ?>
-
+ 	  	
 		</article>
    
     	<aside class="col-md-3">
@@ -136,18 +175,6 @@
        		<nav><?php include('include/aside.php');?></nav>
 
     	</aside>
-
-        <div style="text-align:center;">
-    	<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-        <!-- arbre.genealexis.fr 1 -->
-        <ins class="adsbygoogle"
-        style="display:inline-block;width:468px;height:60px"
-        data-ad-client="ca-pub-1550427609493753"
-        data-ad-slot="1772159645"></ins>
-        <script>
-        (adsbygoogle = window.adsbygoogle || []).push({});
-        </script>
-        </div>
 					
 	</section>
 	
