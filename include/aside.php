@@ -19,6 +19,9 @@
         	
         	<a id="gregrep"  class='list-group-item list-group-item-action' href="epacte.php" title="Trouver la valeur de l'épacte pour une année donnée">
         	<i class="far fa-calendar-check"></i>&nbsp;&nbsp;Calcul de l'épacte grégorienne</a>
+        	
+        	<a id="gregrep"  class='list-group-item list-group-item-action' href="bissextile.php" title="L'année est-elle bissextile ?">
+        	<i class="far fa-calendar-check"></i>&nbsp;&nbsp;Année bissextile</a>
                                  
         </div>   
 </div>

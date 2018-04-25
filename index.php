@@ -66,8 +66,7 @@
    		- Votre date doit être comprise entre le <strong>22 septembre 1792</strong> (1er vendémiaire an I, jour de proclamation de la République) et le <strong>1er janvier 1806</strong>, 		date d&#39;application du sénatus-consulte signé par Napoléon le 22 fructidor an XIII (9 septembre 1805) qui abroge le calendrier républicain et instaure le retour au calendrier grégorien .</p>
 
     	<h5>Convertir une date</h5>
- 		
- 				
+ 						
  		<form method="post" action="index.php" class="form-inline justify-content-center">
  			
      		<div class="form-group">

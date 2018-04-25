@@ -1,8 +1,9 @@
 Historique des versions
 -----------------------
 
-version 0.6.11 (25/04/18)
+version 0.7.0 (25/04/18)
 
+	- Ajout d'une page pour trouver si une année est bissextile
  	- Suppression de l'algo qui utilise les fonctions de php pour trouver à quel jour correspond une date, il est remplacé par l'algorithme de Mike Keith
  	- TODO : Explications sur la page qui utlise l'aglo de Mike Keith
 
