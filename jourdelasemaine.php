@@ -64,12 +64,13 @@
 
     		<h5>Trouver un jour</h5>
 
-    		<form method="post" action="jourdelasemaine.php" class="form-inline justify-content-center">
+    		<form method="post" action="jourdelasemaine.php">
 
-            	<label>Jour</label> : 
+            	<div class="form-row justify-content-center">
             
-            	<div class="form-group">
-                <select name="jour" class="form-control m-2">
+            	<div class="form-group col-md-2">
+            	<label for="inputDay">Jour</label> 
+                <select name="jour" class="form-control" id="inputDay">
                   <option selected>1</option>
                   <?php
                   for($i=2; $i<32; $i++)
@@ -80,9 +81,9 @@
                 </select>
                 </div>
                             
-	    		<div class="form-group">
-	    		<label for="sujet">Mois</label> 		
-			    <select name="mois" class="form-control m-2">
+	    		<div class="form-group col-md-2">
+	    		<label for="inputMonth">Mois</label> 		
+			    <select name="mois" class="form-control" id="inputMonth">
 				      <option value="1" selected>Janvier</option>
 				      <?php
 			      	  $MoisGregoriens = array("Février", "Mars", "Avril", "Mai", "Juin", "Juillet", "Aout", "Septembre", "Octobre", "Novembre", "Décembre");
@@ -96,14 +97,20 @@
 			    </select>
 	       		</div>
             
-            	<div class="form-group">
-            	<label>Année</label> :            
-                <input type="text" name="annee" class="form-control m-2">
+            	<div class="form-group col-md-2">
+            	<label for="inputYear">Année</label>           
+                <input type="text" name="annee" class="form-control" id="inputYear">
                 </div>
                               
-                <input type="submit" value="Trouver !" class="btn btn-outline-secondary">
-
-   			 </form>
+                </div>
+		  
+		  <div class="form-row justify-content-center">
+		  
+		  	<button type="submit" class="btn btn-outline-secondary">Trouver !</button>
+		  
+		  </div>
+		  
+		</form>
 
      		<?php 
      		
@@ -160,7 +167,7 @@
                 		$day =  (((23 * $gregorian->month) / 9)+ $gregorian->day + 4 + $gregorian->year + ($z / 4) - ($z / 100) + ($z / 400) ) % 7;
                 		}
                 			
-                	$day = $gregorian->JourEnLettre($day); 
+                	$day = $gregorian->JourEnLettre($day-1); 
                 	$gregorian->month = $gregorian->MoisEnLettre($gregorian->month);
                 			
                 	echo "<p class='alert alert-success'> Le ".$gregorian->day." ".$gregorian->month." ".$gregorian->year." est un <strong>".$day."</strong></p>";   

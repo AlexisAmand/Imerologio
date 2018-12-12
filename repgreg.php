@@ -64,14 +64,16 @@
 	
 	    <h5>Convertir une date</h5>
 	
-	    <form method="post" action="repgreg.php" class="form-inline justify-content-center">
+	    <form method="post" action="repgreg.php">
+	    
+	    <div class="form-row justify-content-center">	
 	
-		<div class="form-group">
-	    <label>Jour</label> : 
-	    <select name="jour" class="form-control m-2">
-	      <option selected>1</option>
+		<div class="form-group col-md-2">
+	    <label for="inputDay">Jour</label>
+	    <select name="jour" class="form-control m-2" id="inputDay">
+	      <option selected>Choisir...</option>	
 	      <?php
-	      for($i=2; $i<31; $i++)
+	      for($i=1; $i<31; $i++)
 	        {
 	        echo "<option value=".$i.">".$i."</option>";
 	        }
@@ -79,13 +81,13 @@
 	    </select>
 	    </div>
 	
-		<div class="form-group">
-	    <label>Mois</label> : 	    
-	    <select name="mois" class="form-control m-2">
-	      <option value="1" selected>Vendémiaire</option>
+		<div class="form-group col-md-2">
+	    <label for="inputMonth">Mois</label>    
+	    <select name="mois" class="form-control m-2" id="inputMonth">
+	      <option selected>Choisir...</option>
 	      <?php
-	      $MoisRepublicains = array("Brumaire", "Frimaire", "Nivose", "Pluviose", "Ventose", "Germinal", "Floréal", "Prairial", "Messidor", "Thermidor", "Fructidor", "Sansculottide");
-	      $i = 2;
+	      $MoisRepublicains = array("Vendémiaire","Brumaire", "Frimaire", "Nivose", "Pluviose", "Ventose", "Germinal", "Floréal", "Prairial", "Messidor", "Thermidor", "Fructidor", "Sansculottide");
+	      $i = 1;
 	      foreach($MoisRepublicains as $val)
 	        {
 	        echo "<option value=".$i.">".$val."</option>";
@@ -95,14 +97,13 @@
 	    </select>
 	    </div>
 	    
-	    <div class="form-group">	    
-	    <label>An</label> : 
-	
-	    <select name="annee" class="form-control m-2">
-	      <option value="1" selected>I</option>
+	    <div class="form-group col-md-2">	    
+	    <label for="inputYear">An</label>
+	    <select name="annee" class="form-control m-2" id="inputYear">
+	      <option selected>Choisir...</option>
 	      <?php
-	      $romain = array("II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X", "XI", "XII", "XIII", "XIV");
-	      $i = 2;
+	      $romain = array("I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X", "XI", "XII", "XIII", "XIV");
+	      $i = 1;
 	      foreach($romain as $val)
 	        {
 	        echo "<option value=".$i.">".$val."</option>";
@@ -129,9 +130,15 @@
 	        }
 	    ?>
 	
-	    <input type="submit" value="Convertir !" class="btn btn-outline-secondary">
-	
-	    </form>
+	    </div>
+		  
+		  <div class="form-row justify-content-center">
+		  
+		  	<button type="submit" class="btn btn-outline-secondary">Convertir !</button>
+		  
+		  </div>
+		  
+		</form>
 	
 	    <?php 
 	

@@ -67,51 +67,53 @@
 
     	<h5>Convertir une date</h5>
  						
- 		<form method="post" action="index.php" class="form-inline justify-content-center">
- 			
-     		<div class="form-group">
-    		<label for="jours">Jour</label>
-    		<select name="jour" class="form-control m-2">
-              <option selected>1</option>
-              <?php
-              for($i=2; $i<32; $i++)
-                {
-                echo "<option value=".$i.">".$i."</option>";
-                }
-              ?>
-            </select>
-    		</div>
-    		
-    		<div class="form-group">
-    		<label for="sujet">Mois</label> 		
-		    <select name="mois" class="form-control m-2">
-			      <option value="1" selected>Janvier</option>
+ 		<form method="post" action="index.php">
+ 		
+		  <div class="form-row justify-content-center">
+		  
+		    <div class="form-group col-md-2">
+		      <label for="inputDay">Jour</label>
+		      <select id="inputDay" class="form-control" name="jour">
+			      <option selected>Choisir...</option>
 			      <?php
-		      	  $MoisGregoriens = array("Février", "Mars", "Avril", "Mai", "Juin", "Juillet", "Aout", "Septembre", "Octobre", "Novembre", "Décembre");
-		          $i = 2;
-		          foreach($MoisGregoriens as $val)
-		          	{
-		        	echo "<option value=".$i.">".$val."</option>";
-		        	$i++;
-		        	}
+	              for($i=1; $i<32; $i++)
+	                {
+	                echo "<option value=".$i.">".$i."</option>";
+	                }
+	              ?>
+		      </select>
+		    </div>
+		    
+		    <div class="form-group col-md-2">
+		      <label for="inputMonth">Mois</label>
+		      <select id="inputMonth" class="form-control" name="mois">
+		          <option selected>Choisir...</option>
+		          <?php
+	      		  $MoisGregoriens = array("Janvier", "Février", "Mars", "Avril", "Mai", "Juin", "Juillet", "Aout", "Septembre", "Octobre", "Novembre", "Décembre");
+	          	  $i = 1;
+	          	  foreach($MoisGregoriens as $val)
+	          		{
+	        		echo "<option value=".$i.">".$val."</option>";
+	        		$i++;
+	        		}
 		      	  ?>
-		    </select>
-       		</div>
-    		
-    		<div class="form-group">
-    		<label for="sujet">Année</label>
-    		<select name="annee" class="form-control m-2">
-                  <option selected>1792</option>
-                  <?php
-                  for($i=1793; $i<1806; $i++)
-                    {
+              </select>
+		    </div>
+		    
+		    <div class="form-group col-md-2">
+		      <label for="inputYear">Année</label>
+		      <select id="inputYear" class="form-control" name="annee">
+		          <option selected>Choisir...</option>
+		          <?php
+                  for($i=1792; $i<1806; $i++)
+                	{
                     echo "<option value=".$i.">".$i."</option>";
                     }
                   ?>
-            </select>
-    		</div>
-    		
- 	 		<?php
+		      </select>
+		    </div>
+		    
+		    <?php
             if (isset($_POST['compteur']))
                 {
                 $compteur = $_POST['compteur'] + 1;
@@ -127,10 +129,16 @@
                 echo '<input type="hidden" name="historique" value="'.$historique.'" />';
                 }
             ?>
-    
- 			<input type="submit" value="Convertir !" class="btn btn-outline-secondary">
- 						
- 	  	</form>
+		    
+		  </div>
+		  
+		  <div class="form-row justify-content-center">
+		  
+		  	<button type="submit" class="btn btn-outline-secondary">Convertir !</button>
+		  
+		  </div>
+		  
+		</form>
  	  	 	  	
  	 	<?php 
 

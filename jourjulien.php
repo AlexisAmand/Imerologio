@@ -63,7 +63,7 @@
    
     		<h5>Trouver une date</h5>	
     		
-				<form method="post" action=" " class="form-inline justify-content-center">
+				<form method="post" action="jourjulien.php" class="form-inline justify-content-center">
 				
 				<div class="form-group">
 				<label for="jours">Jour</label>
