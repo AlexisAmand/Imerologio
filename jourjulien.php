@@ -63,9 +63,11 @@
    
     		<h5>Trouver une date</h5>	
     		
-				<form method="post" action="jourjulien.php" class="form-inline justify-content-center">
+				<form method="post" action="jourjulien.php">
 				
-				<div class="form-group">
+				<div class="form-row justify-content-center">
+				
+				<div class="form-group col-md-2">
 				<label for="jours">Jour</label>
 				<select name="jour" class="form-control m-2">
 				<option selected>1</option>
@@ -78,7 +80,7 @@
             	</select>
     			</div>
     		
-	    		<div class="form-group">
+	    		<div class="form-group col-md-2">
 	    		<label for="sujet">Mois</label> 		
 			    <select name="mois" class="form-control m-2">
 				      <option value="1" selected>Janvier</option>
@@ -94,14 +96,20 @@
 			    </select>
 	       		</div>
     		
-	    		<div class="form-group">
+	    		<div class="form-group col-md-2">
 			    <label>Année</label> : 
 			    <input type="text" name="annee" class="form-control m-2">
 			    </div>
     		
-    		<input type="submit" value="Convertir !" class="btn btn-outline-secondary">
-    		
-    		</form>
+    		</div>
+		  
+		  <div class="form-row justify-content-center">
+		  
+		  	<button type="submit" class="btn btn-outline-secondary">Convertir !</button>
+		  
+		  </div>
+		  
+		</form>
     		
     		<?php 
 				

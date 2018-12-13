@@ -71,9 +71,9 @@
             	<div class="form-group col-md-2">
             	<label for="inputDay">Jour</label> 
                 <select name="jour" class="form-control" id="inputDay">
-                  <option selected>1</option>
+                  <option selected>Choisir...</option>
                   <?php
-                  for($i=2; $i<32; $i++)
+                  for($i=1; $i<32; $i++)
                     {
                     echo "<option value=".$i.">".$i."</option>";
                     }
@@ -84,10 +84,10 @@
 	    		<div class="form-group col-md-2">
 	    		<label for="inputMonth">Mois</label> 		
 			    <select name="mois" class="form-control" id="inputMonth">
-				      <option value="1" selected>Janvier</option>
+			    	  <option selected>Choisir...</option>
 				      <?php
-			      	  $MoisGregoriens = array("Février", "Mars", "Avril", "Mai", "Juin", "Juillet", "Aout", "Septembre", "Octobre", "Novembre", "Décembre");
-			          $i = 2;
+			      	  $MoisGregoriens = array("Janvier","Février", "Mars", "Avril", "Mai", "Juin", "Juillet", "Aout", "Septembre", "Octobre", "Novembre", "Décembre");
+			          $i = 1;
 			          foreach($MoisGregoriens as $val)
 			          	{
 			        	echo "<option value=".$i.">".$val."</option>";
