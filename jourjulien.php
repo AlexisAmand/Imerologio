@@ -120,13 +120,17 @@
 					$gregorian->day = $_POST['jour'];
 					$gregorian->month = $_POST['mois'];
 					$gregorian->year = $_POST['annee'];
-												
+																	
 					$jd = cal_to_jd (  CAL_GREGORIAN , $gregorian->month , $gregorian->day , $gregorian->year );
+					
+					/* La mise en lettre du mois se fait ici car au dessus j'ai encore besoin du mois en chiffre */
+					
+					$gregorian->month = $gregorian->MoisEnLettre($gregorian->month);
 					
 					echo "<p class='alert alert-success'>Le ".$gregorian->day." ".$gregorian->month." ".$gregorian->year." est le jour julien ".$jd."</p>";
 					}
 								
-				?>
+			?>
  										  
 		</article>
    
