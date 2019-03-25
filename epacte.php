@@ -59,16 +59,24 @@
    
     		<h5>Calculer l'épacte</h5>
 
-    		<form method="post" action="epacte.php" class="form-inline justify-content-center">
+    		<form method="post" action="epacte.php">
 
-				<div class="form-group">
-			    <label>Année</label> : 
-			    <input type="text" name="annee" class="form-control m-2">
+			<div class="form-row justify-content-center">
+
+				<div class="form-group col-md-2">
+			    <label for="inputYear">Année</label> 
+			    <input id="inputYear" type="text" name="annee" class="form-control">
 			    </div>
 			    
- 				<input type="submit" value="Calculer !" class="btn btn-outline-secondary">
-
-   			</form>
+ 			</div>
+		  
+		  	<div class="form-row justify-content-center">
+		  
+		  		<button type="submit" class="btn btn-outline-secondary">Calculer !</button>
+		  
+		  	</div>
+		  
+		</form>
   
     	<?php 
     	

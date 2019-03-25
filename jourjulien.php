@@ -67,47 +67,47 @@
 				
 				<div class="form-row justify-content-center">
 				
-				<div class="form-group col-md-2">
-				<label for="jours">Jour</label>
-				<select name="jour" class="form-control m-2">
-				<option selected>1</option>
-				<?php
-				for($i=2; $i<32; $i++)
-				{
-					echo "<option value=".$i.">".$i."</option>";
-				}
-				?>
-            	</select>
+					<div class="form-group col-md-2">
+					<label for="jours">Jour</label>
+					<select name="jour" class="form-control">
+					<option selected>1</option>
+					<?php
+					for($i=2; $i<32; $i++)
+					{
+						echo "<option value=".$i.">".$i."</option>";
+					}
+					?>
+	            	</select>
+	    			</div>
+    		
+		    		<div class="form-group col-md-2">
+		    		<label for="sujet">Mois</label> 		
+				    <select name="mois" class="form-control">
+					      <option value="1" selected>Janvier</option>
+					      <?php
+				      	  $MoisGregoriens = array("Février", "Mars", "Avril", "Mai", "Juin", "Juillet", "Aout", "Septembre", "Octobre", "Novembre", "Décembre");
+				          $i = 2;
+				          foreach($MoisGregoriens as $val)
+				          	{
+				        	echo "<option value=".$i.">".$val."</option>";
+				        	$i++;
+				        	}
+				      	  ?>
+				    </select>
+		       		</div>
+    		
+		    		<div class="form-group col-md-2">
+				    <label>Année</label> : 
+				    <input type="text" name="annee" class="form-control">
+				    </div>
+    		
     			</div>
-    		
-	    		<div class="form-group col-md-2">
-	    		<label for="sujet">Mois</label> 		
-			    <select name="mois" class="form-control m-2">
-				      <option value="1" selected>Janvier</option>
-				      <?php
-			      	  $MoisGregoriens = array("Février", "Mars", "Avril", "Mai", "Juin", "Juillet", "Aout", "Septembre", "Octobre", "Novembre", "Décembre");
-			          $i = 2;
-			          foreach($MoisGregoriens as $val)
-			          	{
-			        	echo "<option value=".$i.">".$val."</option>";
-			        	$i++;
-			        	}
-			      	  ?>
-			    </select>
-	       		</div>
-    		
-	    		<div class="form-group col-md-2">
-			    <label>Année</label> : 
-			    <input type="text" name="annee" class="form-control m-2">
-			    </div>
-    		
-    		</div>
 		  
-		  <div class="form-row justify-content-center">
-		  
-		  	<button type="submit" class="btn btn-outline-secondary">Convertir !</button>
-		  
-		  </div>
+				  <div class="form-row justify-content-center">
+				  
+				  	<button type="submit" class="btn btn-outline-secondary">Convertir !</button>
+				  
+				  </div>
 		  
 		</form>
     		

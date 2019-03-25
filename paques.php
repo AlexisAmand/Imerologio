@@ -4,36 +4,36 @@
 <!DOCTYPE html>
 
 <html lang="fr">
-	<head>
+<head>
 
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
 
-		<title>Trouver quel jour était Pâques | <?php echo SITE_TITLE; ?></title>
-		<meta name="description" content="Application en ligne utilisant l'algorithme de Meeus pour trouver quelle était la date de Pâques pour une année donnée du calendrier grégorien">
+	<title>Trouver quel jour était Pâques | <?php echo SITE_TITLE; ?></title>
+	<meta name="description" content="Application en ligne utilisant l'algorithme de Meeus pour trouver quelle était la date de Pâques pour une année donnée du calendrier grégorien">
 
-        <!-- Jquery 3.3.1 -->
+    <!-- Jquery 3.3.1 -->
     	
-    	<script src="js/jquery-3.3.1.min.js"></script>						
+    <script src="js/jquery-3.3.1.min.js"></script>						
 						
-		<!-- Bootstrap 4.1.0 -->
-		
-		<link href="css/bootstrap.css" rel="stylesheet">	
-		<script src="js/bootstrap.min.js"></script>	
+	<!-- Bootstrap 4.1.0 -->
+	
+	<link href="css/bootstrap.css" rel="stylesheet">	
+	<script src="js/bootstrap.min.js"></script>	
 
-		<!-- CSS perso -->
-		
-		<link href="css/style.css" rel="stylesheet">
-		
-		<!-- font awesome 5.0.10 -->
-		
-		<link href="css/fontawesome-all.css" rel="stylesheet">
-		
-		<!-- code piwik pour les stats -->
-		
-		<?php include('include/piwik.php'); ?>
+	<!-- CSS perso -->
+	
+	<link href="css/style.css" rel="stylesheet">
+	
+	<!-- font awesome 5.0.10 -->
+	
+	<link href="css/fontawesome-all.css" rel="stylesheet">
+	
+	<!-- code piwik pour les stats -->
+	
+	<?php include('include/piwik.php'); ?>
 
-   	</head>
+</head>
 	
 <body>
 	
@@ -149,10 +149,7 @@
              		echo "<p class='alert alert-warning'>La date entrée n'est pas correcte ! Elle doit être supérieure à 1583.</p>";
              		}
         	}
-       
-
-        
-           
+                
     	?>
 
 		</article>

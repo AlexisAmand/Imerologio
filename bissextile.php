@@ -55,7 +55,7 @@
 
  			<h5>Un peu d'histoire</h5>
  	
- 			<p class="text-justify">todo</p>
+ 			<p class="text-justify">Bientôt...</p>
  		
  			<h5>Comment ça marche ?</h5>
 
@@ -63,16 +63,24 @@
    
     		<h5>Trouver si l'année est bissextile</h5>
 
-    		<form method="post" action="bissextile.php" class="form-inline justify-content-center">
+    		<form method="post" action="bissextile.php">
+    		
+    		<div class="form-row justify-content-center">
 
-				<div class="form-group">
-			    <label>Année</label> : 
-			    <input type="text" name="annee" class="form-control m-2">
+				<div class="form-group col-md-2">
+			    <label for="inputYear">Année</label>
+			    <input id="inputYear" type="text" name="annee" class="form-contro">
 			    </div>
 			    
- 				<input type="submit" value="Trouver !" class="btn btn-outline-secondary">
-
-   			</form>
+ 			</div>
+		  
+		  <div class="form-row justify-content-center">
+		  
+		  	<button type="submit" class="btn btn-outline-secondary">Trouver !</button>
+		  
+		  </div>
+		  
+		</form>
   
     	<?php 
     	
