@@ -55,7 +55,7 @@
 
 	    <h5>Un peu d'histoire</h5>
  		
- 		<p class="text-justify">Le calendrier républicain est un calendrier révolutionnaire français qui a été mis en place durant la Révolution française. Il débute le 1er vendémiaire an I (jour de proclamation de la République) mais entre en vigueur seulement à partir du 15 vendémiaire an II. Il était découpé en 12 mois de 30 jours, auquel on ajoutait cinq ou six jours complémentaires selon les années. Le calendrier républicain est abrogé par Napoléon le 22 fructidor an XIII (9 septembre 1805) par un sénatus-consulte qui fixe le rétour au calendrier grégorien dés le 11 nivôse suivant (1er janvier 1806).</p>
+ 		<p class="text-justify">Le calendrier républicain est un calendrier révolutionnaire français qui a été mis en place durant la Révolution française. Il débute le 1er vendémiaire an I (jour de proclamation de la République) mais entre en vigueur seulement à partir du 15 vendémiaire an II. Il était découpé en 12 mois de 30 jours, auquel on ajoutait cinq ou six jours complémentaires selon les années. Le calendrier républicain est abrogé par Napoléon le 22 fructidor an XIII (9 septembre 1805) par un sénatus-consulte qui fixe le retour au calendrier grégorien dès le 11 nivôse suivant (1er janvier 1806).</p>
  		
  		<h5>Comment ça marche ?</h5>
 	

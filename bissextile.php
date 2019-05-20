@@ -61,7 +61,7 @@
 
     		<p>- Indiquez une date supérieure à 1583, puis cliquez sur le bouton trouver.</p>
    
-    		<h5>Trouver si l'année est bissextile</h5>
+    		<h5>Trouver si une année est bissextile</h5>
 
     		<form method="post" action="bissextile.php">
     		
