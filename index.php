@@ -18,7 +18,7 @@
     	
     	<script src="js/jquery-3.3.1.min.js"></script>						
 						
-		<!-- Bootstrap 4.1.0 -->
+		<!-- Bootstrap 4.3.1 -->
 		
 		<link href="css/bootstrap.min.css" rel="stylesheet">	
 		<script src="js/bootstrap.min.js"></script>	
@@ -27,7 +27,7 @@
 		
 		<link href="css/style.css" rel="stylesheet">
 		
-		<!-- font awesome 5.0.10 -->
+		<!-- Font Awesome 5.8.2 -->
 		
 		<link href="css/fontawesome-all.min.css" rel="stylesheet">
 		
