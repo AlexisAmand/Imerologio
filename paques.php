@@ -12,9 +12,9 @@
 	<title>Trouver quel jour était Pâques | <?php echo SITE_TITLE; ?></title>
 	<meta name="description" content="Application en ligne utilisant l'algorithme de Meeus pour trouver quelle était la date de Pâques pour une année donnée du calendrier grégorien">
 
-    <!-- Jquery 3.3.1 -->
+    <!-- Jquery 3.4.1-->
     	
-    <script src="js/jquery-3.3.1.min.js"></script>						
+    <script src="js/jquery-3.4.1.min.js"></script>						
 						
 	<!-- Bootstrap 4.3.1 -->
 	

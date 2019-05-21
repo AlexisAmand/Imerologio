@@ -12,9 +12,9 @@
 		<title>Trouver à quel jour de la semaine correspond une date | <?php echo SITE_TITLE; ?></title>
 		<meta name="description" content="Application en ligne utilisant l'algorithme de Mike Keith pour trouver à quel jour de la semaine correspond une date donnée du calendrier grégorien">
 
-        <!-- Jquery 3.3.1 -->
+        <!-- Jquery 3.4.1-->
     	
-    	<script src="js/jquery-3.3.1.min.js"></script>						
+    	<script src="js/jquery-3.4.1.min.js"></script>						
 						
 		<!-- Bootstrap 4.3.1 -->
 		

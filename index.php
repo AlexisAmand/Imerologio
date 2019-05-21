@@ -14,9 +14,9 @@
 		
 		<meta name="google-site-verification" content="NrJvg2SL3r8GToGISpF-SJatGnKIvS5mekxb-2uTef4" />
 						
-    	<!-- Jquery 3.3.1 -->
+    	<!-- Jquery 3.4.1-->
     	
-    	<script src="js/jquery-3.3.1.min.js"></script>						
+    	<script src="js/jquery-3.4.1.min.js"></script>						
 						
 		<!-- Bootstrap 4.3.1 -->
 		

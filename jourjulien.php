@@ -12,9 +12,9 @@
 		<title>Calcul du jour julien | <?php echo SITE_TITLE; ?></title>
 		<meta name="description" content="Application en ligne pour calculer le jour julien d'une date donnée">
 
-        <!-- Jquery 3.3.1 -->
+        <!-- Jquery 3.4.1-->
     	
-    	<script src="js/jquery-3.3.1.min.js"></script>						
+    	<script src="js/jquery-3.4.1.min.js"></script>						
 						
 		<!-- Bootstrap 4.3.1 -->
 		

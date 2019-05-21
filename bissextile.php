@@ -12,9 +12,9 @@
 		<title>L'année est-elle bissextile ? | <?php echo SITE_TITLE; ?></title>
 		<meta name="description" content="Trouver si une année du calendrier grégorien est bissextile">
 
-        <!-- Jquery 3.3.1 -->
+        <!-- Jquery 3.4.1-->
     	
-    	<script src="js/jquery-3.3.1.min.js"></script>						
+    	<script src="js/jquery-3.4.1.min.js"></script>						
 						
 		<!-- Bootstrap 4.3.1 -->
 		

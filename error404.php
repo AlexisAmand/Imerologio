@@ -12,9 +12,9 @@
 		<title>Erreur 404 | <?php echo SITE_TITLE; ?></title>
 		<meta name="description" content="La page que vous cherchez n'a pas été trouvée.">
 
-        <!-- Jquery 3.3.1 -->
+        <!-- Jquery 3.4.1-->
     	
-    	<script src="js/jquery-3.3.1.min.js"></script>						
+    	<script src="js/jquery-3.4.1.min.js"></script>						
 						
 		<!-- Bootstrap 4.3.1 -->
 		
