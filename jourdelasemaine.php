@@ -29,10 +29,6 @@
 		
 		<link href="css/fontawesome-all.css" rel="stylesheet">
 		
-		<!-- code piwik pour les stats -->
-		
-		<?php include('include/piwik.php'); ?>
-
    	</head>
 	
 <body>
@@ -194,6 +190,10 @@
  	</footer>
  	
 </div>
+
+<!-- code piwik pour les stats -->
+		
+<?php include('include/piwik.php'); ?>
 
 </body>
 </html>
