@@ -33,7 +33,7 @@
 	
 <body>
 	
-<div class="container">
+<div class="container mt-4">
 
  	<header class="row">
  		<div class="col-md-12">
@@ -62,11 +62,10 @@
     		<form method="post" action="paques.php" class="form-inline justify-content-center">
 
 				<div class="form-group">
-			    <label>Année</label> : 
-			    <input type="text" name="annee" class="form-control m-2">
-			    </div>
+					<input type="text" name="annee" class="form-control m-2" id="inputYear" placeholder="Indiquez une année">
+				</div>
 			    
- 				<input type="submit" value="Trouver !" class="btn btn-outline-secondary">
+				<button type="submit" class="btn btn-outline-secondary">Trouver !</button>
 
    			</form>
   

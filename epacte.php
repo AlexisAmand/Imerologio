@@ -33,7 +33,7 @@
 	
 <body>
 	
-<div class="container">
+<div class="container mt-4">
 
  	<header class="row">
  		<div class="col-md-12">
@@ -53,27 +53,16 @@
 
     		<p>- Indiquez une date supérieure à 1583, puis cliquez sur le bouton calculer.</p>
    
-    		<h5>Calculer l'épacte</h5>
+				<form method="post" action="epacte.php" class="form-inline justify-content-center">
 
-    		<form method="post" action="epacte.php">
+					<div class="form-group">
+						<input type="text" name="annee" class="form-control m-2" id="inputYear" placeholder="Indiquez une année">
+					</div>
 
-			<div class="form-row justify-content-center">
+					<button type="submit" class="btn btn-outline-secondary">Trouver !</button>
 
-				<div class="form-group col-md-2">
-			    <label for="inputYear">Année</label> 
-			    <input id="inputYear" type="text" name="annee" class="form-control">
-			    </div>
-			    
- 			</div>
-		  
-		  	<div class="form-row justify-content-center">
-		  
-		  		<button type="submit" class="btn btn-outline-secondary">Calculer !</button>
-		  
-		  	</div>
-		  
-		</form>
-  
+				</form>
+
     	<?php 
     	
     	if (isset($_POST['annee']))

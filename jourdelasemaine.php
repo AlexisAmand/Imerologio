@@ -33,7 +33,7 @@
 	
 <body>
 	
-<div class="container">
+<div class="container mt-4">
 
  	<header class="row">
  		<div class="col-md-12">
@@ -49,25 +49,17 @@
 
     	<h3>A quel jour correspond une date ?</h3>
     	
-    		<h5>Un peu d'histoire</h5>
-    	
-    		<p>Ce formulaire utilise l'algorithme de Mike Keith pour vous aider à trouver à quel jour de la semaine correspond une date donnée du calendrier grégorien. Il a initialement été publié en 1990 dans un article du <em>Journal of Recrational Mathematics (Vol. 22, No. 4, 1990, p. 280).</em></p> 
-
    		 	<h5>Comment ça marche ?</h5>
 
-    		<p>- Indiquez votre date et cliquez sur le bouton "Trouver !".<br />
-    		- Votre date doit être composée de 4 chiffres !</p>
-
-    		<h5>Trouver un jour</h5>
+    		<p class="text-justify">Indiquez votre date, avec un année composée de 4 chiffres, et cliquez sur le bouton "Trouver !".</p>
 
     		<form method="post" action="jourdelasemaine.php">
 
             	<div class="form-row justify-content-center">
             
             	<div class="form-group col-md-2">
-            	<label for="inputDay">Jour</label> 
                 <select name="jour" class="form-control" id="inputDay">
-                  <option selected>Choisir...</option>
+                  <option selected>Jour</option>
                   <?php
                   for($i=1; $i<32; $i++)
                     {
@@ -78,9 +70,8 @@
                 </div>
                             
 	    		<div class="form-group col-md-2">
-	    		<label for="inputMonth">Mois</label> 		
 			    <select name="mois" class="form-control" id="inputMonth">
-			    	  <option selected>Choisir...</option>
+			    	  <option selected>Mois</option>
 				      <?php
 			      	  $MoisGregoriens = array("Janvier","Février", "Mars", "Avril", "Mai", "Juin", "Juillet", "Aout", "Septembre", "Octobre", "Novembre", "Décembre");
 			          $i = 1;
@@ -94,10 +85,9 @@
 	       		</div>
             
             	<div class="form-group col-md-2">
-            	<label for="inputYear">Année</label>           
-                <input type="text" name="annee" class="form-control" id="inputYear">
+                <input type="text" name="annee" class="form-control" id="inputYear" placeholder="Année">
                 </div>
-                              
+              
                 </div>
 		  
 		  <div class="form-row justify-content-center">
@@ -110,36 +100,6 @@
 
      		<?php 
      		
-     		/* Algorithme utilisant les fonctions de PHP */
-     		
-     		/*
-
-            if (isset($_POST['jour']) and isset($_POST['mois']) and isset($_POST['annee']))
-                {
-                if (!empty($_POST['annee']))
-                    {                    
-                    $gregorian = new gregorians;
-                    
-                    $gregorian->day = $_POST['jour'];
-                    $gregorian->year = $_POST['annee'];
-        
-                    $jj = gregoriantojd( $_POST['mois'] , $gregorian->day , $gregorian->year );
-                    $resultat = jddayofweek($jj,0);
-                    
-                    $resultat = $gregorian->JourEnLettre($resultat);     
-                    
-                    $gregorian->month = $gregorian->MoisEnLettre($_POST['mois']);
-                     
-                    echo "<p class='alert alert-success'> Le ".$gregorian->day." ".$gregorian->month." ".$gregorian->year." est un <strong>".$resultat."</strong></p>";   
-                    }     
-                else
-                    {
-                    echo "<p class='alert alert-warning'>La date entrée n'est pas correcte !</p>";
-                    }    
-           		 }
-                
-            */ 
-                
             /* Algorithme de Mike Keith */
                 
             if (isset($_POST['jour']) and isset($_POST['mois']) and isset($_POST['annee']))
@@ -174,6 +134,10 @@
                 	}                 	       	
                 }
             ?>
+		
+		<h5>Un peu d'histoire</h5>
+    	
+		<p>Ce formulaire utilise l'algorithme de Mike Keith pour vous aider à trouver à quel jour de la semaine correspond une date donnée du calendrier grégorien. Il a initialement été publié en 1990 dans un article du <em>Journal of Recrational Mathematics (Vol. 22, No. 4, 1990, p. 280).</em></p> 
  	  	
 		</article>
    

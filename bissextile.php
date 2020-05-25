@@ -33,7 +33,7 @@
 	
 <body>
 	
-<div class="container">
+<div class="container mt-4">
 
  	<header class="row">
  		<div class="col-md-12">
@@ -49,35 +49,20 @@
 
     	<h3>L'année est-elle bissextile ? </h3>
 
- 			<h5>Un peu d'histoire</h5>
- 	
- 			<p class="text-justify">Bientôt...</p>
- 		
  			<h5>Comment ça marche ?</h5>
 
-    		<p>- Indiquez une date supérieure à 1583, puis cliquez sur le bouton trouver.</p>
+    		<p>Indiquez une date supérieure à 1583, puis cliquez sur le bouton trouver.</p>
    
-    		<h5>Trouver si une année est bissextile</h5>
+				<form method="post" action="bissextile.php" class="form-inline justify-content-center">
 
-    		<form method="post" action="bissextile.php">
-    		
-    		<div class="form-row justify-content-center">
+					<div class="form-group">
+						<input type="text" name="annee" class="form-control m-2" id="inputYear" placeholder="Indiquez une année">
+					</div>
 
-				<div class="form-group col-md-2">
-			    <label for="inputYear">Année</label>
-			    <input id="inputYear" type="text" name="annee" class="form-contro">
-			    </div>
-			    
- 			</div>
-		  
-		  <div class="form-row justify-content-center">
-		  
-		  	<button type="submit" class="btn btn-outline-secondary">Trouver !</button>
-		  
-		  </div>
-		  
-		</form>
-  
+					<button type="submit" class="btn btn-outline-secondary">Trouver !</button>
+
+				</form>
+
     	<?php 
     	
     	if (isset($_POST['annee']))
@@ -100,6 +85,10 @@
         	}
        
         ?>
+
+		<h5>Un peu d'histoire</h5>
+ 	
+	 	<p class="text-justify">L'année bissextile sert à rattraper le retard pris par l'année civile sur l'année solaire. C'est une habitude qui remonte aux Romains.</p>
 
 		</article>
     

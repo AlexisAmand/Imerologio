@@ -35,7 +35,7 @@
 	
 <body>
 
-<div class="container">
+<div class="container mt-4">
 
  	<header class="row">
 		 	
@@ -51,26 +51,18 @@
  		<article class="col-md-9">
  		
  		<h3>Convertir une date grégorienne en date républicaine </h3>	
- 		
- 		<h5>Un peu d'histoire</h5>
- 		
- 		<p class="text-justify">Le calendrier grégorien a été conçu par Christophorus Clavius à la demande du pape Grégoire XIII pour corriger la dérive du calendrier julien qui était en usage depuis 46 avant Jésus-Christ. Il est adopté le 24 février 1582 et appliqué le 15 octobre 1582. Il va ensuite s'imposer dans le monde entier pour les usages civils, parfois en parallèle aux calendriers traditionnels ou religieux. En France, le passage se fit dès décembre 1582.</p>
- 		
+ 		 		
  		<h5>Comment ça marche ?</h5>
 
-    	<p>- Indiquez votre date et cliquez sur le bouton convertir.<br />
-   		- Votre date doit être comprise entre le <strong>22 septembre 1792</strong> (1er vendémiaire an I, jour de proclamation de la République) et le <strong>1er janvier 1806</strong>, 		date d&#39;application du sénatus-consulte signé par Napoléon le 22 fructidor an XIII (9 septembre 1805) qui abroge le calendrier républicain et instaure le retour au calendrier grégorien .</p>
+     <p class="text-justify">Indiquez votre date et cliquez sur le bouton convertir. Votre date doit être comprise entre le <strong>22 septembre 1792</strong> (1er vendémiaire an I, jour de proclamation de la République) et le <strong>1er janvier 1806</strong>, 		date d&#39;application du sénatus-consulte signé par Napoléon le 22 fructidor an XIII (9 septembre 1805) qui abroge le calendrier républicain et instaure le retour au calendrier grégorien .</p>
 
-    	<h5>Convertir une date</h5>
- 						
  		<form method="post" action="index.php">
  		
 		  <div class="form-row justify-content-center">
 		  
 		    <div class="form-group col-md-2">
-		      <label for="inputDay">Jour</label>
 		      <select id="inputDay" class="form-control" name="jour">
-			      <option selected>Choisir...</option>
+			      <option selected>Jour</option>
 			      <?php
 	              for($i=1; $i<32; $i++)
 	                {
@@ -81,9 +73,8 @@
 		    </div>
 		    
 		    <div class="form-group col-md-2">
-		      <label for="inputMonth">Mois</label>
 		      <select id="inputMonth" class="form-control" name="mois">
-		          <option selected>Choisir...</option>
+		          <option selected>Mois</option>
 		          <?php
 	      		  $MoisGregoriens = array("Janvier", "Février", "Mars", "Avril", "Mai", "Juin", "Juillet", "Aout", "Septembre", "Octobre", "Novembre", "Décembre");
 	          	  $i = 1;
@@ -97,9 +88,8 @@
 		    </div>
 		    
 		    <div class="form-group col-md-2">
-		      <label for="inputYear">Année</label>
 		      <select id="inputYear" class="form-control" name="annee">
-		          <option selected>Choisir...</option>
+		          <option selected>Année</option>
 		          <?php
                   for($i=1792; $i<1806; $i++)
                 	{
@@ -173,7 +163,11 @@
                 }
             }
     
-        ?>	 
+        ?>
+
+      <h5>Un peu d'histoire</h5>
+ 		
+ 		  <p class="text-justify">Le calendrier grégorien a été conçu par Christophorus Clavius à la demande du pape Grégoire XIII pour corriger la dérive du calendrier julien qui était en usage depuis 46 avant Jésus-Christ. Il est adopté le 24 février 1582 et appliqué le 15 octobre 1582. Il va ensuite s'imposer dans le monde entier pour les usages civils, parfois en parallèle aux calendriers traditionnels ou religieux. En France, le passage se fit dès décembre 1582.</p>
  	  			 	  
 		</article>  
 		
@@ -230,13 +224,13 @@
         
         if ($compteur == 1)
             {
-            echo "<li class='list-group-item'>Vous n'avez pas<br />encore fait de conversion.</li>";
+            echo "<li class='list-group-item text-center'>Vous n'avez pas<br />encore fait de conversion.</li>";
             }
 
         ?>
         
         </ul>
-          </div>      
+          </div>
  		</aside>
  	
  	</section>
