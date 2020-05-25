@@ -1,5 +1,11 @@
-<?php require('class/class.php'); ?>
-<?php require('config.php');?>
+<?php 
+
+require('class/class.php'); 
+require('config.php');
+$erreur = 0;
+$historique = "";
+
+?>
 
 <!DOCTYPE html>
 
@@ -98,24 +104,10 @@
                   ?>
 		      </select>
 		    </div>
-		    
-		    <?php
-            if (isset($_POST['compteur']))
-                {
-                $compteur = $_POST['compteur'] + 1;
-                $historique = $_POST['historique'].$_POST['jour']."/".$_POST['mois']."/".$_POST['annee']."/";
-                echo '<input type="hidden" name="compteur" value="'.$compteur.'" />';
-                echo '<input type="hidden" name="historique" value="'.$historique.'" />';
-                }
-            else
-                {
-                $compteur = 1;
-                $historique = "";
-                echo '<input type="hidden" name="compteur" value="1" />';
-                echo '<input type="hidden" name="historique" value="'.$historique.'" />';
-                }
-            ?>
-		    
+
+
+        <input type="hidden" name="historique" value="<?php echo $historique; ?>" />
+		        
 		  </div>
 		  
 		  <div class="form-row justify-content-center">
@@ -126,41 +118,57 @@
 		  
 		</form>
  	  	 	  	
- 	 	<?php 
+      <?php 
+
+        $erreur = 1;
 
         if (isset($_POST['jour']) and isset($_POST['mois']) and isset($_POST['annee']))
             {
-            $gregorian = new gregorians;         
-                
+            $gregorian = new gregorians;
+            
             $gregorian->day = $_POST['jour'];
             $gregorian->month = $_POST['mois'];
             $gregorian->year = $_POST['annee'];
-    
-            $jj = gregoriantojd ( $gregorian->month , $gregorian->day , $gregorian->year );
-            $resultat = jdtofrench($jj);
-    
-            if ($resultat == "0/0/0")
-                {
-                echo "<p class='alert alert-warning'>La date entrée n'est pas correcte !</p>";
-                }
+
+            if (($gregorian->month == 'Jour') or ($gregorian->day == 'Mois') or ($gregorian->year == 'Année'))
+              {
+              echo "<p class='alert alert-warning'>La date entrée n'est pas correcte !</p>";
+              $erreur = 1;
+              }
             else
-                {
-                $tabrepublic = explode("/", $resultat);
-    
-                $republic = new republics;
-                                        
-                $republic->month = $tabrepublic[0];
-                $republic->day = $tabrepublic[1];
-                $republic->year = $tabrepublic[2];
-                
-                $republic->month = $republic->MoisEnLettre($republic->month);
-                    
-                $republic->year = $republic->AnneeEnLettre($republic->year);
-                                
-                $gregorian->month = $gregorian->MoisEnLettre($gregorian->month);
-        
-                echo "<p class='alert alert-success'>Le <strong>".$gregorian->day." ".$gregorian->month." ".$gregorian->year."</strong> correspond au <strong>".$republic->day." ".$republic->month." an ".$republic->year."</strong></p>";
-                }
+              {
+  
+              $jj = gregoriantojd ( $gregorian->month , $gregorian->day , $gregorian->year );
+              $resultat = jdtofrench($jj);
+      
+              if ($resultat == "0/0/0")
+                  {
+                  echo "<p class='alert alert-warning'>La date entrée n'est pas correcte !</p>";
+                  }
+              else
+                  {
+
+                  /* ----- */
+                  $historique = $_POST['historique'].$_POST['jour']."/".$_POST['mois']."/".$_POST['annee']."/";
+
+                  $tabrepublic = explode("/", $resultat);
+      
+                  $republic = new republics;
+                                          
+                  $republic->month = $tabrepublic[0];
+                  $republic->day = $tabrepublic[1];
+                  $republic->year = $tabrepublic[2];
+                  
+                  $republic->month = $republic->MoisEnLettre($republic->month);
+                      
+                  $republic->year = $republic->AnneeEnLettre($republic->year);
+                                  
+                  $gregorian->month = $gregorian->MoisEnLettre($gregorian->month);
+          
+                  echo "<p class='alert alert-success'>Le <strong>".$gregorian->day." ".$gregorian->month." ".$gregorian->year."</strong> correspond au <strong>".$republic->day." ".$republic->month." an ".$republic->year."</strong></p>";
+                  }
+              }
+
             }
     
         ?>
@@ -193,7 +201,7 @@
         
         if (isset($historique))
             {
-            
+        
             $tableau = explode('/', $historique);
             for ($i = 0; $i < count($tableau) - 1; $i+=3)
                 {
@@ -222,7 +230,7 @@
            
             }
         
-        if ($compteur == 1)
+        if ($historique == "")
             {
             echo "<li class='list-group-item text-center'>Vous n'avez pas<br />encore fait de conversion.</li>";
             }

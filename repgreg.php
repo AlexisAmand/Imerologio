@@ -1,5 +1,11 @@
-<?php require('class/class.php'); ?>
-<?php require('config.php');?>
+<?php 
+
+require('class/class.php'); 
+require('config.php');
+$erreur = 0;
+$historique = "";
+
+?>
 
 <!DOCTYPE html>
 
@@ -99,22 +105,7 @@
 	    </select>
 	    </div>
 	
-	    <?php
-	    if (isset($_POST['compteur']))
-	        {
-	        $compteur = $_POST['compteur'] + 1;
-	        $historique = $_POST['historique'].$_POST['jour']."/".$_POST['mois']."/".$_POST['annee']."/";
-	        echo '<input type="hidden" name="compteur" value="'.$compteur.'" />';
-	        echo '<input type="hidden" name="historique" value="'.$historique.'" />';
-	        }
-	    else
-	        {
-	        $compteur = 1;
-	        $historique = "";
-	        echo '<input type="hidden" name="compteur" value="1" />';
-	        echo '<input type="hidden" name="historique" value="'.$historique.'" />';
-	        }
-	    ?>
+	    <input type="hidden" name="historique" value="<?php echo $historique; ?>" />
 	
 	    </div>
 		  
@@ -126,7 +117,9 @@
 		  
 		</form>
 	
-	    <?php 
+		<?php 
+		
+		$erreur = 1;
 	
 	    if (isset($_POST['jour']) and isset($_POST['mois']) and isset($_POST['annee']))
 	        {
@@ -134,7 +127,15 @@
 	        	
 	        $republic->day = $_POST['jour'];
 	        $republic->month = $_POST['mois'];
-	        $republic->year = $_POST['annee'];
+			$republic->year = $_POST['annee'];
+			
+			if (($gregorian->month == 'Jour') or ($gregorian->day == 'Mois') or ($gregorian->year == 'Année'))
+              {
+              echo "<p class='alert alert-warning'>La date entrée n'est pas correcte !</p>";
+              $erreur = 1;
+              }
+            else
+              {
 	
 	        $jj = frenchtojd( $republic->month , $republic->day , $republic->year );
 	        $resultat = jdtogregorian($jj);
@@ -145,6 +146,10 @@
 	            }
 	        else
 	            {
+
+				 /* ----- */
+				 $historique = $_POST['historique'].$_POST['jour']."/".$_POST['mois']."/".$_POST['annee']."/";
+
 	            $tabrepublic = explode("/", $resultat);
 	
 	            $gregorian = new gregorians;
@@ -161,7 +166,8 @@
 	
 	            echo "<p class='alert alert-success'>Le <strong>".$republic->day." ".$republic->month." an ".$republic->year."</strong> correspond au <strong>".$gregorian->day." ".$gregorian->month." ".$gregorian->year."</strong></p>";
 	            }
-	        }
+			}
+		}
 	
 	    ?>
 
@@ -219,7 +225,7 @@
 	            }
 	        }
 	
-	    if ($compteur == 1)
+	    if ($historique = "")
 	        {
 			echo "<li class='list-group-item text-center'>Vous n'avez pas<br />encore fait de conversion.</li>";
 	        }
