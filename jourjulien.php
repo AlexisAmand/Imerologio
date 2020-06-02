@@ -61,7 +61,7 @@
 					<select name="jour" class="form-control">
 					<option selected>Jour</option>
 					<?php
-					for($i=1; $i<31; $i++)
+					for($i=1; $i<32; $i++)
 					{
 						echo "<option value=".$i.">".$i."</option>";
 					}
