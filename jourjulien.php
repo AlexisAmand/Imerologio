@@ -28,6 +28,21 @@
 		<!-- Font Awesome 5.8.2 -->
 		
 		<link href="css/fontawesome-all.css" rel="stylesheet">
+
+		<script>
+		function DateDuJour( )
+			{
+				var now = new Date();
+
+				var annee   = now.getFullYear();
+				var mois    = now.getMonth() + 1;
+				var jour    = now.getDate();
+				
+				document.getElementById("jour").value = jour;
+				document.getElementById("mois").value = mois;
+				document.getElementById("annee").value = parseInt(annee);
+			}
+		</script>
 		
    	</head>
 	
@@ -58,7 +73,7 @@
 				<div class="form-row justify-content-center">
 				
 					<div class="form-group col-md-2">
-					<select name="jour" class="form-control">
+					<select name="jour" class="form-control" id="jour">
 					<option selected>Jour</option>
 					<?php
 					for($i=1; $i<32; $i++)
@@ -70,7 +85,7 @@
 	    			</div>
     		
 		    		<div class="form-group col-md-2">
-				    <select name="mois" class="form-control">
+				    <select name="mois" class="form-control" id="mois">
 					      <option selected>Mois</option>
 					      <?php
 				      	  $MoisGregoriens = array("Janvier", "Février", "Mars", "Avril", "Mai", "Juin", "Juillet", "Aout", "Septembre", "Octobre", "Novembre", "Décembre");
@@ -85,7 +100,7 @@
 		       		</div>
     		
 		    		<div class="form-group col-md-2">
-				    <input type="text" name="annee" class="form-control" placeholder="Année">
+				    <input type="text" name="annee" class="form-control"  placeholder="Année" id="annee">
 				    </div>
     		
     			</div>
@@ -93,11 +108,12 @@
 				  <div class="form-row justify-content-center">
 				  
 				  	<button type="submit" class="btn btn-outline-secondary">Convertir !</button>
-				  
+					<button onclick="DateDuJour()" class="btn btn-outline-secondary ml-2" type="button">Aujourd'hui</button>
+
 				  </div>
 		  
-		</form>
-    		
+			</form>				
+
     		<?php 
 				
 				if (isset($_POST['jour']) and isset($_POST['mois']) and isset($_POST['annee']))
