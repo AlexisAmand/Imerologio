@@ -51,6 +51,7 @@ $historique = "";
  		<p class="text-center"><?php echo SITE_SLOGAN; ?></p>
  		
  		</div>
+     
  	</header>
  	
  	<section class="row">
