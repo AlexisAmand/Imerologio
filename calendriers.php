@@ -93,7 +93,7 @@ require('config.php');
 				<tr>
 					<td>Jour</td>
 					<td>
-		    			<input type="text" name="wday" value="" size="9" class="ctr form-control"" readonly="readonly" />
+		    			<input type="text" name="wday" value="" size="9" class="ctr form-control" readonly="readonly" />
 					</td>
 				</tr>
 				<tr>
