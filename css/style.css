@@ -21,12 +21,10 @@ html, body
 body 
 	{ 
 	margin:0;
-	padding:0;
-	
+	padding:0;	
 	background: url('../img/fond.jpg') repeat fixed; 
 	-webkit-background-size: cover;
-	background-size: cover;
-	
+	background-size: cover;	
 	}
 	
 form
