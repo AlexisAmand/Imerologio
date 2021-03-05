@@ -16,8 +16,6 @@ require('config.php');
     <title>Convertisseur de calendriers anciens et actuels en Javascript</title>
 	<meta name="description" content="Convertisseur des calendriers anciens et modernes : maya, republicain, gregorien, hebreux et julien. Vous devez avoir JavaScript activé pour que cette page fonctionne">
    
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-
 	<link href='http://fonts.googleapis.com/css?family=Short+Stack|Handlee|Varela+Round' rel='stylesheet' type='text/css'>
 	
 	<!-- Calendriers -->
