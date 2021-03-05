@@ -50,12 +50,12 @@
     	<h3>Quel jour était Pâques ?</h3>
 
  			<h5>Un peu d'histoire</h5>
- 	
- 			<p class="text-justify">La date de Pâques est fixée par le Concile de Nicée de 325 qui la défini ainsi: <em>"Pâques est le dimanche qui suit le 14e jour de la Lune qui atteint cet âge le 21 mars ou immédiatement après"</em>. Pâques tombe donc entre le 22 mars et le 25 avril de chaque année. À partir du début du XVIIIe siècle, les mathématiciens recherchent des méthodes simplifiant le calcul de la date de Pâques: Gauss (1800), Meeus (1876) ou encore Conway (1980). J'ai choisi l'algorithme de Meeus car c'est le plus exact pour une date supérieure à 1583.</p>
- 		
+
+			<p class="text-justify">La date de Pâques est fixée par le Concile de Nicée de 325 qui la défini ainsi : <em>"Pâques est le dimanche qui suit le 14e jour de la Lune qui atteint cet âge le 21 mars ou immédiatement après"</em>. Pâques tombe donc entre le 22 mars et le 25 avril de chaque année. À partir du début du XVIIIe siècle, les mathématiciens recherchent des méthodes simplifiant le calcul de la date de Pâques : Gauss (1800), Meeus (1876) ou encore Conway (1980). J'ai choisi l'algorithme de Meeus, car c'est le plus exact pour une date supérieure à 1583.</p>
+		
  			<h5>Comment ça marche ?</h5>
 
-    		<p>- Indiquez une date supérieure à 1583, puis cliquez sur le bouton trouver.</p>
+    		<p>Indiquez simplement une date supérieure à 1583, puis cliquez sur le bouton trouver.</p>
    
     		<h5>Trouver la date de Pâques</h5>
 

@@ -73,7 +73,7 @@
 			    <select name="mois" class="form-control" id="inputMonth">
 			    	  <option selected>Mois</option>
 				      <?php
-			      	  $MoisGregoriens = array("Janvier","Février", "Mars", "Avril", "Mai", "Juin", "Juillet", "Aout", "Septembre", "Octobre", "Novembre", "Décembre");
+			      	  $MoisGregoriens = array("Janvier","Février", "Mars", "Avril", "Mai", "Juin", "Juillet", "Aout", "septembre", "Octobre", "Novembre", "Décembre");
 			          $i = 1;
 			          foreach($MoisGregoriens as $val)
 			          	{

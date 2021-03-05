@@ -109,7 +109,7 @@ require('config.php');
 					        <option value="6">Juin</option>
 					        <option value="7">Juillet</option>
 					        <option value="8">Août</option>
-					        <option value="9">Septembre</option>
+					        <option value="9">septembre</option>
 					        <option value="10">Octobre</option>
 					        <option value="11">Novembre</option>
 					        <option value="12">Decembre</option>
@@ -208,7 +208,7 @@ require('config.php');
 						<option value="6">Juin</option>
 						<option value="7">Juillet</option>
 						<option value="8">Août</option>
-						<option value="9">Septembre</option>
+						<option value="9">septembre</option>
 						<option value="10">Octobre</option>
 						<option value="11">Novembre</option>
 						<option value="12">Decembre</option>

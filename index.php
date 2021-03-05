@@ -61,7 +61,7 @@ $historique = "";
  		 		
  		<h5>Comment ça marche ?</h5>
 
-     <p class="text-justify">Indiquez votre date et cliquez sur le bouton convertir. Votre date doit être comprise entre le <strong>22 septembre 1792</strong> (1er vendémiaire an I, jour de proclamation de la République) et le <strong>1er janvier 1806</strong>, 		date d&#39;application du sénatus-consulte signé par Napoléon le 22 fructidor an XIII (9 septembre 1805) qui abroge le calendrier républicain et instaure le retour au calendrier grégorien .</p>
+     <p class="text-justify">Indiquez votre date et cliquez sur le bouton convertir. Votre date doit être comprise entre le <strong>22 septembre 1792</strong> (1er vendémiaire an I, jour de proclamation de la République) et le <strong>1er janvier 1806</strong>, date d&#39;application du sénatus-consulte signé par Napoléon le 22 fructidor an XIII (9 septembre 1805) qui abroge le calendrier républicain et instaure le retour au calendrier grégorien.</p>
 
  		<form method="post" action="index.php">
  		
@@ -83,7 +83,7 @@ $historique = "";
 		      <select id="inputMonth" class="form-control" name="mois">
 		          <option selected>Mois</option>
 		          <?php
-	      		  $MoisGregoriens = array("Janvier", "Février", "Mars", "Avril", "Mai", "Juin", "Juillet", "Aout", "Septembre", "Octobre", "Novembre", "Décembre");
+	      		  $MoisGregoriens = array("Janvier", "Février", "Mars", "Avril", "Mai", "Juin", "Juillet", "Aout", "septembre", "Octobre", "Novembre", "Décembre");
 	          	  $i = 1;
 	          	  foreach($MoisGregoriens as $val)
 	          		{

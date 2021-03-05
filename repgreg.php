@@ -57,7 +57,7 @@ $historique = "";
  		
  		<h5>Comment ça marche ?</h5>
 	
-		 <p class="text-justify">Indiquez votre date et cliquez sur le bouton convertir. Cet outil convertit les dates comprises entre l'an I et l'an XIV (22 Septembre 1792 à 22 Septembre 1806 en calendrier grégorien).</p>
+		 <p class="text-justify">Indiquez votre date et cliquez sur le bouton convertir. Cet outil convertit les dates comprises entre l'an I et l'an XIV (22 septembre 1792 à 22 septembre 1806 en calendrier grégorien).</p>
 		
 	    <form method="post" action="repgreg.php">
 	    

@@ -88,7 +88,7 @@
 				    <select name="mois" class="form-control" id="mois">
 					      <option selected>Mois</option>
 					      <?php
-				      	  $MoisGregoriens = array("Janvier", "Février", "Mars", "Avril", "Mai", "Juin", "Juillet", "Aout", "Septembre", "Octobre", "Novembre", "Décembre");
+				      	  $MoisGregoriens = array("Janvier", "Février", "Mars", "Avril", "Mai", "Juin", "Juillet", "Aout", "septembre", "Octobre", "Novembre", "Décembre");
 				          $i = 1;
 				          foreach($MoisGregoriens as $val)
 				          	{
@@ -137,7 +137,7 @@
 
 			<h5>Un peu d'histoire</h5>
 			
-			<p class="text-justify">Le jour julien correspond au nombre de jours qui se sont écoulés depuis midi du 1er janvier 4713 avant Jésus-Christ selon le calendrier julien proleptique ou le 24 novembre 4714 avant Jésus-Christ selon le calendrier grégorien proleptique, exprimé en jours décimaux. La partie entière spécifie jour et la partie décimale spécifie l'heure : 0,5 correspondant au "minuit" du jour en question. Le jour Julien est cependant trés peu employée en raison de sa taille: le 7 juillet 2011 correspond ainsi au jour julien 2455749.5 !</p>
+			<p class="text-justify">Le jour julien correspond au nombre de jours qui se sont écoulés depuis midi du 1er janvier 4713 avant Jésus-Christ selon le calendrier julien proleptique ou le 24 novembre 4714 avant Jésus-Christ selon le calendrier grégorien proleptique, exprimé en jours décimaux. La partie entière spécifie le jour et la partie décimale spécifie l'heure : 0,5 correspondant au "minuit" du jour en question. Le jour Julien est cependant très peu employée en raison de sa taille : le 7 juillet 2011 correspond ainsi au jour julien 2455749.5 !</p>
  										  
 		</article>
    
