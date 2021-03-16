@@ -1,4 +1,4 @@
-# Imerológio (fr)
+## Imerológio (fr)
 
 Imerológio est un outil en PHP qui permet de faire des calculs sur les dates.
 
@@ -12,7 +12,7 @@ Imerológio est un outil en PHP qui permet de faire des calculs sur les dates.
 
 site du projet: http://imerologio.genealexis.fr/
 
-# Imerológio (en)
+## Imerológio (en)
 
 Imerológio is a PHP tool that allows you to make calculations on dates.
 
@@ -25,3 +25,10 @@ Imerológio is a PHP tool that allows you to make calculations on dates.
 7. Is it a leap year?
 
 project website: http://imerologio.genealexis.fr/
+
+## Environement de développement
+
+* Laragon 4.0.16
+* Apache 2.4.35
+* phpMyAdmin 5.1
+* Windows 10
