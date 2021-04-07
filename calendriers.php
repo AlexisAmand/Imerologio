@@ -63,7 +63,7 @@ require('config.php');
 
 		<form name="warning" action="javascript:return false;" class="form-inline">
 
-		<p class="text-justify">Ce convertisseur est adapté de "Calendar Converter" disponible sur <a href="https://www.fourmilab.ch/documents/calendar/">Fourmilab</a>. Autrefois présent sur mon site "La Généalogie Entre Amis", que j'ai administré de 2007 à 2015, il est de retour dans un version modernisée et remise au goût du jour. Pour que cette page fonctionne, vous devez avoir JavaScript activé, normalement c'est le cas sur la plupart des machines. Si la case suivante est allumée verte, c'est bon. </p>
+		<p class="text-justify">Ce convertisseur est adapté de "Calendar Converter" disponible sur <a href="https://www.fourmilab.ch/documents/calendar/">Fourmilab</a>. Autrefois présent sur mon site "La Généalogie Entre Amis", que j'ai administré de 2007 à 2015, il est de retour dans une version modernisée et remise au goût du jour. Pour que cette page fonctionne, vous devez avoir JavaScript activé. Normalement, c'est le cas sur la plupart des machines. Si la case suivante est allumée verte, c'est bon. </p>
 
 		<input type="text" name="warning" style="background-color: red; color: #000000;" value=" " class="ctr form-control col-1" readonly="readonly"/>
 		
@@ -79,7 +79,7 @@ require('config.php');
 		
 		<h5 class="mt-5">Comment ça marche ?</h5>
 	
-		<p>Il suffit de selectionner une date dans le calendrier de départ de votre choix, et de cliquer sur le bouton "Calculer". Elle sera automatiquement convertie dans tous les autres calendriers de la page.</p>
+		<p>Il suffit de sélectionner une date dans le calendrier de départ de votre choix, et de cliquer sur le bouton "Calculer". Elle sera automatiquement convertie dans tous les autres calendriers de la page.</p>
 	
 		<h5 class="mt-5" id="CalendrierGregorien">Calendrier Grégorien</h5>
 		
@@ -168,7 +168,7 @@ require('config.php');
 		
 		</form>
 		
-		<p class="text-justify">Si tout événement de l'histoire humaine peut s'écrire sous la forme d'un nombre positif de jours juliens, tous ces chiffres peuvent s'avérer lourds lorsqu'on travaille avec des événements contemporains. Un jour julien modifié (MJD) est créé en soustrayant 2400000,5 d'un nombre de jour julien, et représente donc le nombre de jours écoulés depuis minuit (00:00), temps universel, le 17 novembre 1858. Les jours juliens modifiés sont largement utilisés pour spécifier l'époque dans les tableaux des éléments orbitaux des satellites artificiels de la Terre. Comme aucun objet de ce type n'existait avant le 4 octobre 1957, tous les JJM liés aux satellites sont positifs.</p>
+		<p class="text-justify">Si tout événement de l'histoire humaine peut s'écrire sous la forme d'un nombre positif de jours juliens, tous ces chiffres peuvent s'avérer lourds lorsqu'on travaille avec des événements contemporains. Un jour julien modifié (MJD) est créé en soustrayant 2400000,5 d'un nombre de jours juliens, et représente donc le nombre de jours écoulés depuis minuit (00:00), temps universel, le 17 novembre 1858. Les jours juliens modifiés sont largement utilisés pour spécifier l'époque dans les tableaux des éléments orbitaux des satellites artificiels de la Terre. Comme aucun objet de ce type n'existait avant le 4 octobre 1957, tous les JJM liés aux satellites sont positifs.</p>
 	
 		<form name="modifiedjulianday" action="javascript:return false;" class="form-inline"> 
 
