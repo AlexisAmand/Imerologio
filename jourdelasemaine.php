@@ -10,11 +10,11 @@
 		<meta name="viewport" content="width=device-width,initial-scale=1.0">
 
 		<title>Trouver à quel jour de la semaine correspond une date | <?php echo SITE_TITLE; ?></title>
-		<meta name="description" content="Application en ligne utilisant l'algorithme de Mike Keith pour trouver à quel jour de la semaine correspond une date donnée du calendrier grégorien">
+		<meta name="description" content="Application en ligne utilisant l'algorithme de Mike Keith pour trouver à quel jour de la semaine correspond une date donnée du calendrier grégorien.">
 
         <!-- Jquery 3.4.1-->
     	
-    	<script src="js/jquery-3.4.1.min.js"></script>						
+    	<script src="js/jquery-3.4.1.min.js"></script>
 						
 		<!-- Bootstrap 4.3.1 -->
 		
@@ -115,15 +115,15 @@
                 	if ($gregorian->month >= 3)
                 		{
                 		$z = $gregorian->year;
-                		$day = (((23 * $gregorian->month) / 9) + $gregorian->day + 4 + $gregorian->year + ($z / 4) - ($z / 100) + ($z / 400) - 2 ) % 7;
+                		$day = ((floor(23 * $gregorian->month) / 9) + $gregorian->day + 4 + $gregorian->year + floor($z / 4) - floor($z / 100) + floor($z / 400) - 2 ) % 7;
                 		}
                 	else
                 		{
                 		$z = $gregorian->year - 1;
-                		$day =  (((23 * $gregorian->month) / 9)+ $gregorian->day + 4 + $gregorian->year + ($z / 4) - ($z / 100) + ($z / 400) ) % 7;
+                		$day =  ((floor(23 * $gregorian->month) / 9)+ $gregorian->day + 4 + $gregorian->year + floor($z / 4) - floor($z / 100) + floor($z / 400) ) % 7;
                 		}
-                			
-                	$day = $gregorian->JourEnLettre($day-1); 
+
+                	$day = $gregorian->JourEnLettre($day); 
                 	$gregorian->month = $gregorian->MoisEnLettre($gregorian->month);
                 			
                 	echo "<p class='alert alert-success'> Le ".$gregorian->day." ".$gregorian->month." ".$gregorian->year." est un <strong>".$day."</strong></p>";   
@@ -131,7 +131,7 @@
                 else
                 	{
                 	echo "<p class='alert alert-warning'>La date entrée n'est pas correcte ! Elle doit être supérieure à 1583.</p>";
-                	}                 	       	
+                	}
                 }
             ?>
 		

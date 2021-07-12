@@ -1,8 +1,6 @@
 Historique des versions
 -----------------------
 
-
-
 version 0.7.1 (25/04/18)
 
 	- Mise à jour des balises metas.
