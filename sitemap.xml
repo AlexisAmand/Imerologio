@@ -1,49 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 	<url>
-		<loc>http://imerologio.test/</loc>
+		<loc>https://imerologio.boitasite.com/</loc>
 		<lastmod>2021-12-14</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.9</priority>
 	</url>
 	<url>
-		<loc>http://imerologio.test/index.php</loc>
+		<loc>https://imerologio.boitasite.com/index.php</loc>
 		<lastmod>2021-12-14</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.8</priority>
 	</url>
 	<url>
-		<loc>http://imerologio.test/repgreg.php</loc>
+		<loc>https://imerologio.boitasite.com/repgreg.php</loc>
 		<lastmod>2021-12-14</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.8</priority>
 	</url>
 	<url>
-		<loc>http://imerologio.test/jourdelasemaine.php</loc>
+		<loc>https://imerologio.boitasite.com/jourdelasemaine.php</loc>
 		<lastmod>2021-12-14</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.8</priority>
 	</url>
 	<url>
-		<loc>http://imerologio.test/paques.php</loc>
+		<loc>https://imerologio.boitasite.com/paques.php</loc>
 		<lastmod>2021-12-14</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.8</priority>
 	</url>
 	<url>
-		<loc>http://imerologio.test/jourjulien.php</loc>
+		<loc>https://imerologio.boitasite.com/jourjulien.php</loc>
 		<lastmod>2021-12-14</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.8</priority>
 	</url>
 	<url>
-		<loc>http://imerologio.test/epacte.php</loc>
+		<loc>https://imerologio.boitasite.com/epacte.php</loc>
 		<lastmod>2021-12-14</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.8</priority>
 	</url>
 	<url>
-		<loc>http://imerologio.test/calendriers.php</loc>
+		<loc>https://imerologio.boitasite.com/calendriers.php</loc>
 		<lastmod>2021-12-14</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.8</priority>
