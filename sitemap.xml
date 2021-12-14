@@ -1,62 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 	<url>
-		<loc>http://imerologio.genealexis.fr/</loc>
-		<lastmod>2018-04-25</lastmod>
+		<loc>http://imerologio.test/</loc>
+		<lastmod>2021-12-14</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.9</priority>
 	</url>
 	<url>
-		<loc>http://imerologio.genealexis.fr/index.php</loc>
-		<lastmod>2018-04-25</lastmod>
+		<loc>http://imerologio.test/index.php</loc>
+		<lastmod>2021-12-14</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.8</priority>
 	</url>
 	<url>
-		<loc>http://imerologio.genealexis.fr/repgreg.php</loc>
-		<lastmod>2018-04-25</lastmod>
+		<loc>http://imerologio.test/repgreg.php</loc>
+		<lastmod>2021-12-14</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.8</priority>
 	</url>
 	<url>
-		<loc>http://imerologio.genealexis.fr/jourdelasemaine.php</loc>
-		<lastmod>2018-04-25</lastmod>
+		<loc>http://imerologio.test/jourdelasemaine.php</loc>
+		<lastmod>2021-12-14</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.8</priority>
 	</url>
 	<url>
-		<loc>http://imerologio.genealexis.fr/paques.php</loc>
-		<lastmod>2018-04-25</lastmod>
+		<loc>http://imerologio.test/paques.php</loc>
+		<lastmod>2021-12-14</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.8</priority>
 	</url>
 	<url>
-		<loc>http://imerologio.genealexis.fr/jourjulien.php</loc>
-		<lastmod>2018-04-25</lastmod>
+		<loc>http://imerologio.test/jourjulien.php</loc>
+		<lastmod>2021-12-14</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.8</priority>
 	</url>
 	<url>
-		<loc>http://imerologio.genealexis.fr/epacte.php</loc>
-		<lastmod>2018-04-25</lastmod>
+		<loc>http://imerologio.test/epacte.php</loc>
+		<lastmod>2021-12-14</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.8</priority>
 	</url>
 	<url>
-		<loc>http://imerologio.genealexis.fr/webfonts/fa-brands-400.woff2</loc>
-		<lastmod>2018-04-20</lastmod>
-		<changefreq>monthly</changefreq>
-		<priority>0.8</priority>
-	</url>
-	<url>
-		<loc>http://imerologio.genealexis.fr/webfonts/fa-regular-400.woff2</loc>
-		<lastmod>2018-04-20</lastmod>
-		<changefreq>monthly</changefreq>
-		<priority>0.8</priority>
-	</url>
-	<url>
-		<loc>http://imerologio.genealexis.fr/webfonts/fa-solid-900.woff2</loc>
-		<lastmod>2018-04-20</lastmod>
+		<loc>http://imerologio.test/calendriers.php</loc>
+		<lastmod>2021-12-14</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.8</priority>
 	</url>

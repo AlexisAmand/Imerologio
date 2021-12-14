@@ -1,9 +1,12 @@
-<?php require('class/class.php'); ?>
-<?php require('config.php');?>
+<?php
+require('class/class.php'); 
+require('config.php');
+?>
 
 <!DOCTYPE html>
 
 <html lang="fr">
+
 	<head>
 
 		<meta charset="utf-8">
@@ -13,21 +16,17 @@
 		<meta name="description" content="Application en ligne pour calculer l'épacte grégorienne d'une année donnée">
 
         <!-- Jquery 3.4.1-->
-    	
     	<script src="js/jquery-3.4.1.min.js"></script>						
 						
 		<!-- Bootstrap 4.3.1 -->
-		
 		<link href="css/bootstrap.css" rel="stylesheet">	
 		<script src="js/bootstrap.min.js"></script>	
 
 		<!-- CSS perso -->
-		
 		<link href="css/style.css" rel="stylesheet">
 		
-		<!-- Font Awesome 5.8.2 -->
-		
-		<link href="css/fontawesome-all.css" rel="stylesheet">
+		<!-- Bootstrap Icons -->
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
 		
    	</head>
 	
@@ -35,12 +34,12 @@
 	
 <div class="container mt-4">
 
- 	<header class="row">
+	<header class="row">
  		<div class="col-md-12">
- 		
- 		<h1 class="text-center"><?php echo SITE_TITLE; ?></h1>
- 		<p class="text-center"><?php echo SITE_SLOGAN; ?></p>
- 		
+			<a href="/index.php" title=" "> 
+				<h1 class="text-center"><?php echo SITE_TITLE; ?></h1>
+				<p class="text-center"><?php echo SITE_SLOGAN; ?></p>
+			</a> 
  		</div>
  	</header>
 

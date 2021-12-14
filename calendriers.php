@@ -1,59 +1,51 @@
 <?php 
-
 require('class/class.php'); 
 require('config.php');
-
 ?>
 
 <!doctype html>
 <html lang="fr">
 
-<head>
+	<head>
 
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width,initial-scale=1.0">
-       
-    <title>Convertisseur de calendriers anciens et actuels en Javascript</title>
-	<meta name="description" content="Convertisseur des calendriers anciens et modernes : maya, republicain, gregorien, hebreux et julien. Vous devez avoir JavaScript activé pour que cette page fonctionne">
-   
-	<link href='http://fonts.googleapis.com/css?family=Short+Stack|Handlee|Varela+Round' rel='stylesheet' type='text/css'>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0">
+		
+		<title>Convertisseur de calendriers anciens et actuels en Javascript</title>
+		<meta name="description" content="Convertisseur des calendriers anciens et modernes : maya, republicain, gregorien, hebreux et julien. Vous devez avoir JavaScript activé pour que cette page fonctionne">
 	
-	<!-- Calendriers -->
-	<script src="js/astro.js"></script>
-	<script src="js/calendar.js"></script>
+		<link href='http://fonts.googleapis.com/css?family=Short+Stack|Handlee|Varela+Round' rel='stylesheet' type='text/css'>
+		
+		<!-- Calendriers -->
+		<script src="js/astro.js"></script>
+		<script src="js/calendar.js"></script>
 
-	<!-- Jquery 3.4.1-->
-    	
-    <script src="js/jquery-3.4.1.min.js"></script>
-						
-	<!-- Bootstrap 4.3.1 -->
-		
-	<link href="css/bootstrap.min.css" rel="stylesheet">
-	<script src="js/bootstrap.min.js"></script>
+		<!-- Jquery 3.4.1-->
+		<script src="js/jquery-3.4.1.min.js"></script>
+							
+		<!-- Bootstrap 4.3.1 -->
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<script src="js/bootstrap.min.js"></script>
 
-	<!-- CSS perso -->
-		
-	<link href="css/style.css" rel="stylesheet">
-		
-	<!-- Font Awesome 5.8.2 -->
-		
-	<link href="css/fontawesome-all.min.css" rel="stylesheet">
-  
-</head>
+		<!-- CSS perso -->
+		<link href="css/style.css" rel="stylesheet">
+			
+		<!-- Bootstrap Icons -->
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+	
+	</head>
 
 <body>
 
 <div class="container mt-4">
 
- 	<header class="row">
-		 	
+	<header class="row">
  		<div class="col-md-12">
- 		
- 		<h1 class="text-center"><?php echo SITE_TITLE; ?></h1>
- 		<p class="text-center"><?php echo SITE_SLOGAN; ?></p>
- 		
+			<a href="/index.php" title=" "> 
+				<h1 class="text-center"><?php echo SITE_TITLE; ?></h1>
+				<p class="text-center"><?php echo SITE_SLOGAN; ?></p>
+			</a> 
  		</div>
-     
  	</header>
 
 	 <section class="row">
