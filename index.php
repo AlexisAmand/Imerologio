@@ -101,7 +101,6 @@ $historique = "";
 		      </select>
 		    </div>
 
-
         <input type="hidden" name="historique" value="<?php echo $historique; ?>" />
 		        
 		  </div>
