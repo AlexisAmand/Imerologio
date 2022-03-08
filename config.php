@@ -1,5 +1,5 @@
 <?php
 define("SITE_TITLE", "Imerológio");
 define("SITE_SLOGAN", "Calculs en ligne sur les calendriers et les dates");
-define("SITE_VERSION", "0.9.55");
+define("SITE_VERSION", "0.9.56");
 ?>
