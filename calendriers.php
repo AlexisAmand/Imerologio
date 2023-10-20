@@ -34,6 +34,9 @@ require('config.php');
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
 
 		<?php include 'include/tarteaucitron.inc.php'; ?>
+
+		<!-- url canonical -->
+		<link rel="canonical" href="https://imerologio.boitasite.com/calendriers.php"/>
 	
 	</head>
 
@@ -64,7 +67,7 @@ require('config.php');
 		</form>
 	
 		<script>
-		<!--
+		// <!--
 			//  Clear out "sorry, no JavaScript" message from text box.
 			document.warning.warning.value = "   ";
 			document.warning.warning.style.backgroundColor = "#82FA58";
@@ -138,7 +141,7 @@ require('config.php');
 		<p class="text-justify">Une légère modification du calendrier grégorien le rendrait encore plus précis. Si vous ajoutez la règle supplémentaire selon laquelle les années régulièrement divisibles par 4000 ne sont pas des années bissextiles, vous obtenez une année solaire moyenne de 365,24225 jours par an qui, par rapport à l'année moyenne réelle de 365,24219878, équivaut à une erreur d'un jour sur une période d'environ 19 500 ans ; cela est comparable aux erreurs dues au freinage de la rotation de la Terre par les marées.</p>
 	
 		<script>
-		<!--
+		// <!--
 			//  Preset the fields in the request form to today's date.
 			setDateToToday();
 		// -->
@@ -814,7 +817,7 @@ require('config.php');
 		<p class='text-justify'>Les nombres de jours sur Macintosh Excel ne sont valables qu'entre 0 (1er janvier 1904) et 2957003 (31 décembre 9999). Bien qu'un système de comptage de jours en série n'ait aucune difficulté à s'adapter à des plages de dates arbitraires ou à des jours précédant le début de l'époque (étant donné la précision suffisante dans la représentation des nombres), Excel ne le fait pas. Les jours négatifs et ceux en Y10K et au-delà ne sont pas du tout traités. De plus, les anciennes versions d'Excel faisaient de l'arithmétique de date en utilisant des quantités de 16 bits et ne supportaient pas les nombres de jours supérieurs à 63918 (31 décembre 2078) ; je ne sais pas dans quelle version d'Excel cette limitation a été corrigée.</p>
 
 		<script>
-		<!--
+		// <!--
 			if (location.search != "") {
 				presetDataToRequest(location.search.substring(1));
 			} else {

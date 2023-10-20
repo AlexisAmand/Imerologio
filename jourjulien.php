@@ -43,6 +43,9 @@ require('config.php');
 			document.getElementById("annee").value = parseInt(annee);
 		}
 		</script>
+
+		<!-- url canonical -->
+		<link rel="canonical" href="https://imerologio.boitasite.com/jourjulien.php"/>
 		
    	</head>
 	

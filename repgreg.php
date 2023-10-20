@@ -32,6 +32,9 @@ $historique = "";
 
 		<?php include 'include/tarteaucitron.inc.php'; ?>
 
+		<!-- url canonical -->
+		<link rel="canonical" href="https://imerologio.boitasite.com/repgreg.php"/>
+
    	</head>
 
 <body>
